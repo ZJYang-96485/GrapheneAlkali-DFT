@@ -1,0 +1,50 @@
+# Bare-substrate Quantum ESPRESSO configuration.
+#
+# Values marked __QE_UNRESOLVED__ are intentional placeholders.  The input
+# generator preserves them in the templates, and scripts/run_relax.sh refuses
+# to run an input until all such values have been selected explicitly.
+
+paths:
+  input_root: qe_inputs/relaxation
+  pseudo_dir: pseudopotentials
+  scratch_root: qe_scratch
+
+dft:
+  calculation: relax
+
+  # Select these consistently before production calculations.
+  pseudopotential_family: __QE_UNRESOLVED__
+  exchange_correlation: __QE_UNRESOLVED__
+  pseudopotentials:
+    C: __QE_UNRESOLVED__
+
+  ecutwfc_ry: __QE_UNRESOLVED__
+  ecutrho_ry: __QE_UNRESOLVED__
+
+  # Supply a three-integer mesh and three integer shifts.
+  k_points:
+    mesh: [__QE_UNRESOLVED__, __QE_UNRESOLVED__, __QE_UNRESOLVED__]
+    shift: [__QE_UNRESOLVED__, __QE_UNRESOLVED__, __QE_UNRESOLVED__]
+
+  occupations: __QE_UNRESOLVED__
+  smearing: __QE_UNRESOLVED__
+  degauss_ry: __QE_UNRESOLVED__
+
+  conv_thr: __QE_UNRESOLVED__
+  forc_conv_thr: __QE_UNRESOLVED__
+  mixing_beta: __QE_UNRESOLVED__
+  nbnd: null
+
+systems:
+  pristine:
+    structure: structures/pristine/graphene_5x5_pristine.traj
+    prefix: graphene_pristine
+    nspin: 1
+    starting_magnetization: null
+
+  monovacancy:
+    structure: structures/monovacancy/graphene_5x5_monovacancy.traj
+    prefix: graphene_monovacancy
+    nspin: 2
+    # User-controlled starting guess; choose explicitly before running.
+    starting_magnetization: __QE_UNRESOLVED__
