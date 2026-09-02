@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Quantum ESPRESSO scratch files
+*.save/
+*.wfc*
+*.mix*
+*.hub*
+tmp/
+outdir/
+
+# Large/generated files
+*.cube
+*.xsf
+*.dat
+
+# macOS
+.DS_Store
+
+# VS Code local settings
+.vscode/
