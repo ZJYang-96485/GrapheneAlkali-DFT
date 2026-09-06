@@ -15,6 +15,10 @@ qe_scratch/
 tmp/
 outdir/
 
+# Locally downloaded pseudopotentials (document filenames, do not commit files)
+pseudopotentials/*.UPF
+pseudopotentials/*.upf
+
 # Large/generated files
 *.cube
 *.xsf

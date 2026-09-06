@@ -107,7 +107,7 @@ def main():
             summary = validate_structure_file(label, path)
             print(
                 f"{label}: {summary['atoms']} C atoms; "
-                f"cell c = {summary['cell_lengths'][2]:.8f} Å; "
+                f"cell c = {summary['cell_lengths'][2]:.8f} angstrom; "
                 f"pbc = {summary['pbc']}"
             )
     except StructureValidationError as exc:
