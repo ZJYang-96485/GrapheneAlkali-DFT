@@ -5,9 +5,9 @@
 
 &CONTROL
    calculation = 'relax',
-   prefix = 'graphene_pristine',
+   prefix = 'graphene_pristine_relax_65_520_cg',
    pseudo_dir = './pseudopotentials',
-   outdir = './qe_scratch/pristine',
+   outdir = './qe_scratch/relaxation/pristine_65_520_cg_20260916',
    tstress = .true.,
    tprnfor = .true.,
    forc_conv_thr = 4.0d-4,
@@ -22,8 +22,8 @@
    dftd3_version = 4,
    dftd3_threebody = .true.,
    assume_isolated = '2D',
-   ecutwfc = 50,
-   ecutrho = 400,
+   ecutwfc = 65,
+   ecutrho = 520,
    nspin = 1,
    occupations = 'smearing',
    smearing = 'mv',
@@ -33,6 +33,7 @@
 &ELECTRONS
    conv_thr = 1.0d-8,
    mixing_beta = 0.3,
+   diagonalization = 'cg',
 /
 
 &IONS

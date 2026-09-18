@@ -23,10 +23,22 @@ echo "Checking Quantum ESPRESSO..."
 if command -v "$QE_BIN" >/dev/null 2>&1; then
     qe_path="$(command -v "$QE_BIN")"
     echo "  OK: executable found - $qe_path"
-    if qe_version="$("$QE_BIN" --version 2>&1)"; then
-        echo "$qe_version" | sed 's/^/  /'
+    # Some QE 7.6 builds do not implement --version as an early-exit option:
+    # they print the normal PWSCF banner, then try to read an input file and
+    # return nonzero. Probe in an isolated temporary directory so any CRASH
+    # file stays out of the repository, and accept only a recognizable banner.
+    qe_probe_dir="$(mktemp -d)"
+    qe_version="$(cd "$qe_probe_dir" && "$qe_path" --version </dev/null 2>&1)"
+    qe_status=$?
+    rm -rf -- "$qe_probe_dir"
+    qe_banner="$(printf '%s\n' "$qe_version" | sed -n '/Program PWSCF v\./p' | head -n 1)"
+    if [[ -n "$qe_banner" ]]; then
+        echo "  OK: ${qe_banner#${qe_banner%%[![:space:]]*}}"
+        if (( qe_status != 0 )); then
+            echo "  NOTE: this build printed its version banner but returned $qe_status for --version."
+        fi
     else
-        echo "  FAIL: $QE_BIN --version did not complete successfully."
+        echo "  FAIL: $QE_BIN did not print a recognizable PWSCF version banner."
         failed=1
     fi
 else

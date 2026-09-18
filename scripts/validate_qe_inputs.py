@@ -36,6 +36,7 @@ def validate_configuration():
     if config["dos"]["k_points"] != {"mesh": [12, 12, 1], "shift": [0, 0, 0]}:
         raise ValueError("configuration: incorrect DOS k-points")
     print("configuration: PASS - locked relaxation, final-SCF, DOS, and pseudopotential values")
+    return config
 
 
 def namelist_integer(text, name):
@@ -61,7 +62,7 @@ def require_patterns(text, patterns, label):
             raise ValueError(f"{label}: missing or incorrect {description}")
 
 
-def validate_one(label, expected_atoms, expected_nspin):
+def validate_one(label, expected_atoms, expected_nspin, config):
     path = ROOT / f"qe_inputs/relaxation/{label}/relax_{label}.in"
     text = path.read_text(encoding="utf-8")
     if UNRESOLVED in text:
@@ -90,15 +91,21 @@ def validate_one(label, expected_atoms, expected_nspin):
         ("PBE", r"^\s*input_dft\s*=\s*['\"]PBE['\"]\s*,"),
         ("DFT-D3", r"^\s*vdw_corr\s*=\s*['\"]dft-d3['\"]\s*,"),
         ("BJ damping", r"^\s*dftd3_version\s*=\s*4\s*,"),
+        ("D3 three-body", r"^\s*dftd3_threebody\s*=\s*\.true\.\s*,"),
         ("2D isolation", r"^\s*assume_isolated\s*=\s*['\"]2D['\"]\s*,"),
-        ("wavefunction cutoff", r"^\s*ecutwfc\s*=\s*50\s*,"),
-        ("density cutoff", r"^\s*ecutrho\s*=\s*400\s*,"),
+        ("wavefunction cutoff", r"^\s*ecutwfc\s*=\s*65\s*,"),
+        ("density cutoff", r"^\s*ecutrho\s*=\s*520\s*,"),
+        ("smearing occupations", r"^\s*occupations\s*=\s*['\"]smearing['\"]\s*,"),
         ("MV smearing", r"^\s*smearing\s*=\s*['\"]mv['\"]\s*,"),
         ("relaxation smearing width", r"^\s*degauss\s*=\s*0\.01\s*,"),
         ("SCF threshold", r"^\s*conv_thr\s*=\s*1\.0d-8\s*,"),
         ("force threshold", r"^\s*forc_conv_thr\s*=\s*4\.0d-4\s*,"),
         ("mixing beta", r"^\s*mixing_beta\s*=\s*0\.3\s*,"),
+        ("CG diagonalization", r"^\s*diagonalization\s*=\s*['\"]cg['\"]\s*,"),
         ("BFGS ions", r"^\s*ion_dynamics\s*=\s*['\"]bfgs['\"]\s*,"),
+        ("explicit cell units", r"^CELL_PARAMETERS\s+angstrom\s*$"),
+        ("explicit coordinate units", r"^ATOMIC_POSITIONS\s+angstrom\s*$"),
+        ("automatic k-point card", r"^K_POINTS\s+automatic\s*$"),
         ("6x6x1 Gamma-centered grid", r"^\s*6\s+6\s+1\s+0\s+0\s+0\s*$"),
     )
     require_patterns(text, common, label)
@@ -118,7 +125,8 @@ def validate_one(label, expected_atoms, expected_nspin):
     position_rows = card_rows(text, "ATOMIC_POSITIONS", expected_atoms)
     labels = [row.split()[0] for row in position_rows]
     positions = np.array([[float(value) for value in row.split()[1:4]] for row in position_rows])
-    structure = read(ROOT / f"structures/{label}/graphene_5x5_{label}.traj")
+    system_config = config["systems"][label]
+    structure = read(ROOT / system_config["structure"])
     if not np.allclose(positions, structure.positions, atol=1.0e-8):
         raise ValueError(f"{label}: rendered coordinates differ from ASE structure")
 
@@ -127,7 +135,7 @@ def validate_one(label, expected_atoms, expected_nspin):
             raise ValueError("pristine: unexpected atomic-type label")
     else:
         monovacancy = structure
-        pristine = read(ROOT / "structures/pristine/graphene_5x5_pristine.traj")
+        pristine = read(ROOT / system_config["pristine_reference"])
         expected_neighbors, vacancy_position, distances = infer_vacancy_neighbors(pristine, monovacancy)
         actual_neighbors = tuple(index for index, atom_label in enumerate(labels) if atom_label == QE_VACANCY_C_LABEL)
         if set(actual_neighbors) != set(expected_neighbors):
@@ -151,13 +159,13 @@ def validate_one(label, expected_atoms, expected_nspin):
 
 def main():
     try:
-        validate_configuration()
-        pristine = read(ROOT / "structures/pristine/graphene_5x5_pristine.traj")
-        monovacancy = read(ROOT / "structures/monovacancy/graphene_5x5_monovacancy.traj")
+        config = validate_configuration()
+        pristine = read(ROOT / config["systems"]["pristine"]["structure"])
+        monovacancy = read(ROOT / config["systems"]["monovacancy"]["structure"])
         validate_atoms(pristine, "pristine")
         validate_atoms(monovacancy, "monovacancy")
-        validate_one("pristine", 50, 1)
-        validate_one("monovacancy", 49, 2)
+        validate_one("pristine", 50, 1, config)
+        validate_one("monovacancy", 49, 2, config)
     except (OSError, ValueError) as exc:
         print(f"validation failed: {exc}", file=sys.stderr)
         return 1

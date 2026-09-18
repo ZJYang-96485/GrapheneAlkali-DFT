@@ -1,0 +1,322 @@
+[
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_40_ecutrho_320",
+    "ecutwfc_ry": 40,
+    "ecutrho_ry": 320,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "nat": 50,
+    "prefix": "c50_conv_cutoff_ecutwfc_40_ecutrho_320",
+    "outdir": "./qe_scratch/convergence/pristine/cutoff/ecutwfc_40_ecutrho_320",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_40_ecutrho_320.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_40_ecutrho_320.out"
+  },
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_45_ecutrho_360",
+    "ecutwfc_ry": 45,
+    "ecutrho_ry": 360,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "nat": 50,
+    "prefix": "c50_conv_cutoff_ecutwfc_45_ecutrho_360",
+    "outdir": "./qe_scratch/convergence/pristine/cutoff/ecutwfc_45_ecutrho_360",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_45_ecutrho_360.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_45_ecutrho_360.out"
+  },
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_50_ecutrho_400",
+    "ecutwfc_ry": 50,
+    "ecutrho_ry": 400,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_conv_diagnostics_ecutwfc_50_ecutrho_400_diagonalization_cg",
+    "outdir": "./qe_scratch/convergence/pristine/diagnostics/ecutwfc_50_ecutrho_400_diagonalization_cg",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_50_ecutrho_400.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_50_ecutrho_400.out"
+  },
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_55_ecutrho_440",
+    "ecutwfc_ry": 55,
+    "ecutrho_ry": 440,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_phase4_postrepair_55_440_cg_20260916",
+    "outdir": "./results/phase4/diagnostics/scratch_c50_55_440_cg_postrepair_20260916",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_55_ecutrho_440.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_55_ecutrho_440.out"
+  },
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_60_ecutrho_480",
+    "ecutwfc_ry": 60,
+    "ecutrho_ry": 480,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_phase4_postrepair_60_480_cg_20260916",
+    "outdir": "./results/phase4/diagnostics/scratch_c50_60_480_cg_postrepair_20260916",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_60_ecutrho_480.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_60_ecutrho_480.out"
+  },
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_65_ecutrho_520",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_phase4_postrepair_65_520_cg_20260916",
+    "outdir": "./results/phase4/diagnostics/scratch_c50_65_520_cg_postrepair_20260916",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_65_ecutrho_520.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_65_ecutrho_520.out"
+  },
+  {
+    "study": "cutoff",
+    "tag": "ecutwfc_70_ecutrho_560",
+    "ecutwfc_ry": 70,
+    "ecutrho_ry": 560,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_phase4_postrepair_70_560_cg_20260916",
+    "outdir": "./results/phase4/diagnostics/scratch_c50_70_560_cg_postrepair_20260916",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_70_ecutrho_560.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_70_ecutrho_560.out"
+  },
+  {
+    "study": "kpoints",
+    "tag": "k_3x3x1",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      3,
+      3,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_conv_kpoints_k_3x3x1",
+    "outdir": "./qe_scratch/convergence/pristine/kpoints/k_3x3x1",
+    "input": "qe_inputs/convergence/pristine/kpoints/k_3x3x1.in",
+    "output": "results/convergence/pristine/kpoints/k_3x3x1.out"
+  },
+  {
+    "study": "kpoints",
+    "tag": "k_6x6x1",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_phase4_postrepair_65_520_cg_20260916",
+    "outdir": "./results/phase4/diagnostics/scratch_c50_65_520_cg_postrepair_20260916",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_65_ecutrho_520.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_65_ecutrho_520.out"
+  },
+  {
+    "study": "kpoints",
+    "tag": "k_9x9x1",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      9,
+      9,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_conv_kpoints_k_9x9x1",
+    "outdir": "./qe_scratch/convergence/pristine/kpoints/k_9x9x1",
+    "input": "qe_inputs/convergence/pristine/kpoints/k_9x9x1.in",
+    "output": "results/convergence/pristine/kpoints/k_9x9x1.out"
+  },
+  {
+    "study": "kpoints",
+    "tag": "k_12x12x1",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      12,
+      12,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_conv_kpoints_k_12x12x1",
+    "outdir": "./qe_scratch/convergence/pristine/kpoints/k_12x12x1",
+    "input": "qe_inputs/convergence/pristine/kpoints/k_12x12x1.in",
+    "output": "results/convergence/pristine/kpoints/k_12x12x1.out"
+  },
+  {
+    "study": "smearing",
+    "tag": "degauss_0p005",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.005,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_conv_smearing_degauss_0p005",
+    "outdir": "./qe_scratch/convergence/pristine/smearing/degauss_0p005",
+    "input": "qe_inputs/convergence/pristine/smearing/degauss_0p005.in",
+    "output": "results/convergence/pristine/smearing/degauss_0p005.out"
+  },
+  {
+    "study": "smearing",
+    "tag": "degauss_0p010",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.01,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_phase4_postrepair_65_520_cg_20260916",
+    "outdir": "./results/phase4/diagnostics/scratch_c50_65_520_cg_postrepair_20260916",
+    "input": "qe_inputs/convergence/pristine/cutoff/ecutwfc_65_ecutrho_520.in",
+    "output": "results/convergence/pristine/cutoff/ecutwfc_65_ecutrho_520.out"
+  },
+  {
+    "study": "smearing",
+    "tag": "degauss_0p020",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [
+      6,
+      6,
+      1
+    ],
+    "k_shift": [
+      0,
+      0,
+      0
+    ],
+    "degauss_ry": 0.02,
+    "diagonalization": "cg",
+    "nat": 50,
+    "prefix": "c50_conv_smearing_degauss_0p020",
+    "outdir": "./qe_scratch/convergence/pristine/smearing/degauss_0p020",
+    "input": "qe_inputs/convergence/pristine/smearing/degauss_0p020.in",
+    "output": "results/convergence/pristine/smearing/degauss_0p020.out"
+  }
+]

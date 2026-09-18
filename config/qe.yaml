@@ -21,12 +21,13 @@ dft:
     qe_vdw_corr: dft-d3
     qe_dftd3_version: 4
     threebody: true
-  ecutwfc_ry: 50
-  ecutrho_ry: 400
+  ecutwfc_ry: 65
+  ecutrho_ry: 520
   occupations: smearing
   smearing: mv
   conv_thr: 1.0e-8
   mixing_beta: 0.3
+  diagonalization: cg
   assume_isolated: 2D
   nbnd: null
 
@@ -53,13 +54,16 @@ dos:
 systems:
   pristine:
     structure: structures/pristine/graphene_5x5_pristine.traj
-    prefix: graphene_pristine
+    prefix: graphene_pristine_relax_65_520_cg
+    outdir: qe_scratch/relaxation/pristine_65_520_cg_20260916
     nspin: 1
 
   monovacancy:
-    structure: structures/monovacancy/graphene_5x5_monovacancy.traj
+    structure: structures/monovacancy/graphene_5x5_monovacancy_seeded_0p01A.xyz
     pristine_reference: structures/pristine/graphene_5x5_pristine.traj
-    prefix: graphene_monovacancy
+    prefix: graphene_monovacancy_relax_65_520_cg_seed001_c1_20260917
+    outdir: qe_scratch/relaxation/monovacancy_65_520_cg_seed001_c1_20260917
+    symmetry_breaking_seed: vacancy neighbor 1 shifted +0.01 angstrom along x toward neighbor 2
     nspin: 2
     starting_magnetization:
       bulk_C: 0.0

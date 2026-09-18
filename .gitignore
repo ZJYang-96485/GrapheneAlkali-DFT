@@ -29,3 +29,21 @@ pseudopotentials/*.upf
 
 # VS Code local settings
 .vscode/
+
+# Machine-specific execution diagnostics and restart data
+/results/phase4/diagnostics/
+/qe_inputs/diagnostics/
+/results/convergence/pristine/diagnostics/
+/results/convergence/pristine/cutoff_reference/
+/results/convergence/pristine/cutoff/*interrupted*.out
+/results/convergence/pristine/cutoff/*retry*.out
+/results/relaxation/monovacancy/*invalid_*.out
+
+# Local exploratory/test artifacts superseded by the curated workflow
+/cutoff_runs/
+/cutoff_convergence_fit.png
+/DFT Walkthrough/
+/H2.scf.out
+/H2.scf.ai.out
+/input_tmp.in
+/2

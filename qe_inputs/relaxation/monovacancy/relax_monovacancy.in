@@ -2,14 +2,16 @@
 ! System: monovacancy
 ! Method: PBE-D3(BJ); dftd3_version=4 selects Becke-Johnson damping.
 ! Pseudopotential family: SSSP Efficiency PBE
-! C_v is the QE-valid (3-character) label for vacancy-adjacent C atoms.
+! C1 distinguishes vacancy-adjacent C atoms while remaining DFT-D3-safe.
 ! Starting magnetizations are unconstrained initial seeds only.
+! Approved symmetry-breaking seed: vacancy neighbor 1 shifted +0.01 angstrom along x toward neighbor 2.
+! QE symmetry remains enabled; a startup symmetry audit is required before continuation.
 
 &CONTROL
    calculation = 'relax',
-   prefix = 'graphene_monovacancy',
+   prefix = 'graphene_monovacancy_relax_65_520_cg_seed001_c1_20260917',
    pseudo_dir = './pseudopotentials',
-   outdir = './qe_scratch/monovacancy',
+   outdir = './qe_scratch/relaxation/monovacancy_65_520_cg_seed001_c1_20260917',
    tstress = .true.,
    tprnfor = .true.,
    forc_conv_thr = 4.0d-4,
@@ -24,8 +26,8 @@
    dftd3_version = 4,
    dftd3_threebody = .true.,
    assume_isolated = '2D',
-   ecutwfc = 50,
-   ecutrho = 400,
+   ecutwfc = 65,
+   ecutrho = 520,
    nspin = 2,
    occupations = 'smearing',
    smearing = 'mv',
@@ -37,6 +39,7 @@
 &ELECTRONS
    conv_thr = 1.0d-8,
    mixing_beta = 0.3,
+   diagonalization = 'cg',
 /
 
 &IONS
@@ -45,7 +48,7 @@
 
 ATOMIC_SPECIES
 C   12.011  C.pbe-n-kjpaw_psl.1.0.0.UPF
-C_v 12.011  C.pbe-n-kjpaw_psl.1.0.0.UPF
+C1  12.011  C.pbe-n-kjpaw_psl.1.0.0.UPF
 
 CELL_PARAMETERS angstrom
   12.30000000  0.00000000  0.00000000
@@ -77,7 +80,7 @@ C   4.92000000 0.00000000 9.00000000
 C   6.15000000 0.71014083 9.00000000
 C   3.69000000 2.13042249 9.00000000
 C   4.92000000 2.84056332 9.00000000
-C_v 2.46000000 4.26084499 9.00000000
+C1  2.47000000 4.26084499 9.00000000
 C   1.23000000 6.39126748 9.00000000
 C   2.46000000 7.10140831 9.00000000
 C   0.00000000 8.52168997 9.00000000
@@ -86,9 +89,9 @@ C   7.38000000 0.00000000 9.00000000
 C   8.61000000 0.71014083 9.00000000
 C   6.15000000 2.13042249 9.00000000
 C   7.38000000 2.84056332 9.00000000
-C_v 4.92000000 4.26084499 9.00000000
+C1  4.92000000 4.26084499 9.00000000
 C   6.15000000 4.97098582 9.00000000
-C_v 3.69000000 6.39126748 9.00000000
+C1  3.69000000 6.39126748 9.00000000
 C   4.92000000 7.10140831 9.00000000
 C   2.46000000 8.52168997 9.00000000
 C   3.69000000 9.23183080 9.00000000

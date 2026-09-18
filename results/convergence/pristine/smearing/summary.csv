@@ -1,0 +1,4 @@
+study,tag,ecutwfc_ry,ecutrho_ry,k_mesh,k_shift,degauss_ry,total_energy_ry,total_energy_ev,energy_per_atom_ev,delta_vs_reference_mev_per_atom,smearing_contribution_ry,internal_energy_ry,fermi_energy_ev,scf_iterations,wall_time_seconds,gpu_active,scf_converged,job_done,output
+smearing,degauss_0p005,65,520,6x6x1,0 0 0,0.005,-922.5214839,-12551.54420931245,-251.03088418624898,0.04961452057727911,-0.00018232,-922.52130158,-4.2099,11,800.82,True,True,True,results/convergence/pristine/smearing/degauss_0p005.out
+smearing,degauss_0p010,65,520,6x6x1,0 0 0,0.01,-922.52166623,-12551.546690038478,-251.03093380076956,0.0,-0.00036458,-922.52130165,-4.2004,11,863.57,True,True,True,results/phase4/diagnostics/graphene_65_520_cg_postrepair_20260916.out
+smearing,degauss_0p020,65,520,6x6x1,0 0 0,0.02,-922.52186329,-12551.549371176365,-251.0309874235273,-0.0536227577470072,0.00073163,-922.52259492,-4.2386,11,802.98,True,True,True,results/convergence/pristine/smearing/degauss_0p020.out

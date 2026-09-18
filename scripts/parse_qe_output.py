@@ -37,16 +37,81 @@ def parse_total_energy(text):
     return as_float(matches[-1]) if matches else None
 
 
-def parse_electronic_convergence(text):
+def parse_gpu_active(text):
+    return bool(re.search(r"GPU acceleration is\s+ACTIVE", text, re.IGNORECASE))
+
+
+def parse_scf_iterations(text):
+    return len(re.findall(r"^\s*iteration\s+#\s*\d+", text, re.IGNORECASE | re.MULTILINE))
+
+
+def duration_seconds(value):
+    factors = {"d": 86400.0, "h": 3600.0, "m": 60.0, "s": 1.0}
+    parts = re.findall(rf"({FLOAT})\s*([dhms])", value, re.IGNORECASE)
+    if not parts:
+        return None
+    return sum(as_float(number) * factors[unit.lower()] for number, unit in parts)
+
+
+def parse_wall_time(text):
+    matches = re.findall(
+        r"^\s*PWSCF\s*:\s*.*?CPU\s+(.*?)\s+WALL",
+        text,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return duration_seconds(matches[-1]) if matches else None
+
+
+def parse_smearing_contribution(text):
+    matches = re.findall(
+        rf"^\s*smearing contrib\.\s*\(-TS\)\s*=\s*({FLOAT})\s+Ry",
+        text,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return as_float(matches[-1]) if matches else None
+
+
+def parse_internal_energy(text):
+    matches = re.findall(
+        rf"^\s*internal energy\s+E=F\+TS\s*=\s*({FLOAT})\s+Ry",
+        text,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return as_float(matches[-1]) if matches else None
+
+
+def parse_fermi_energy(text):
+    matches = re.findall(
+        rf"the Fermi energy is\s*({FLOAT})\s+ev",
+        text,
+        re.IGNORECASE,
+    )
+    return as_float(matches[-1]) if matches else None
+
+
+def parse_electronic_convergence_events(text):
+    """Return every explicit QE SCF-convergence outcome in file order."""
     events = []
     pattern = re.compile(
-        r"convergence\s+(has been achieved|NOT achieved|was not achieved)"
-        r"|End of self-consistent calculation",
+        r"convergence\s+(has been achieved|NOT achieved|was not achieved)",
         re.IGNORECASE,
     )
     for match in pattern.finditer(text):
         phrase = match.group(0).lower()
-        events.append("not achieved" not in phrase and "not" not in phrase)
+        events.append("not achieved" not in phrase)
+
+    # Older QE variants may omit the explicit success phrase while still
+    # printing this unambiguous end marker. Keep that compatibility fallback,
+    # but never let an end marker mask an explicit failed cycle.
+    if not events and re.search(
+        r"End of self-consistent calculation", text, re.IGNORECASE
+    ):
+        events.append(True)
+    return events
+
+
+def parse_electronic_convergence(text):
+    events = parse_electronic_convergence_events(text)
     return events[-1] if events else None
 
 
@@ -66,6 +131,26 @@ def parse_ionic_convergence(text):
     ):
         return True
     return None
+
+
+def parse_ionic_steps(text):
+    matches = re.findall(
+        r"number of bfgs steps\s*=\s*(\d+)|\band\s+(\d+)\s+bfgs steps",
+        text,
+        re.IGNORECASE,
+    )
+    if matches:
+        return int(matches[-1][0] or matches[-1][1])
+    return None
+
+
+def parse_total_force(text):
+    matches = re.findall(
+        rf"^\s*Total force\s*=\s*({FLOAT})",
+        text,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return as_float(matches[-1]) if matches else None
 
 
 def parse_final_forces(text):
@@ -146,30 +231,66 @@ def parse_total_magnetization(text):
     return as_float(matches[-1]) if matches else None
 
 
-def parse_text(text, path):
+def parse_absolute_magnetization(text):
+    matches = re.findall(
+        rf"^\s*absolute magnetization\s*=\s*({FLOAT})\s+Bohr mag/cell",
+        text,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return as_float(matches[-1]) if matches else None
+
+
+def infer_calculation(text):
+    if re.search(
+        r"BFGS Geometry Optimization|Begin final coordinates|number of bfgs steps",
+        text,
+        re.IGNORECASE,
+    ):
+        return "relax"
+    return "scf"
+
+
+def parse_text(text, path, calculation="auto"):
+    calculation = infer_calculation(text) if calculation == "auto" else calculation
     forces = parse_final_forces(text)
-    ionic_convergence = parse_ionic_convergence(text)
+    electronic_events = parse_electronic_convergence_events(text)
+    ionic_convergence = parse_ionic_convergence(text) if calculation == "relax" else None
     return {
         "file": str(path),
+        "calculation": calculation,
         "job_completed": parse_job_completion(text),
+        "gpu_acceleration_active": parse_gpu_active(text),
         "electronic_convergence_reached": parse_electronic_convergence(text),
+        "electronic_convergence_events": electronic_events,
+        "electronic_converged_cycles": sum(electronic_events),
+        "electronic_failed_cycles": sum(not event for event in electronic_events),
+        "all_electronic_cycles_converged": bool(electronic_events)
+        and all(electronic_events),
+        "scf_iterations": parse_scf_iterations(text),
+        "wall_time_seconds": parse_wall_time(text),
         "ionic_convergence_reached": ionic_convergence,
         "ionic_relaxation_completed": ionic_convergence,
+        "ionic_steps": parse_ionic_steps(text) if calculation == "relax" else None,
         "final_total_energy_ry": parse_total_energy(text),
+        "smearing_contribution_ry": parse_smearing_contribution(text),
+        "internal_energy_ry": parse_internal_energy(text),
+        "fermi_energy_ev": parse_fermi_energy(text),
+        "final_total_force_ry_bohr": parse_total_force(text),
         "maximum_force_ry_bohr": maximum_force(forces),
         "final_forces": forces,
         "final_coordinates": parse_final_coordinates(text),
         "total_magnetization_bohr_magneton_per_cell": parse_total_magnetization(text),
+        "absolute_magnetization_bohr_magneton_per_cell": parse_absolute_magnetization(text),
     }
 
 
-def parse_output(path, allow_incomplete=False):
+def parse_output(path, allow_incomplete=False, calculation="auto"):
     path = Path(path)
     if not path.is_file():
         raise QEOutputParseError(f"QE output not found: {path}")
 
     text = path.read_text(encoding="utf-8", errors="replace")
-    result = parse_text(text, path)
+    result = parse_text(text, path, calculation=calculation)
     if allow_incomplete:
         return result
 
@@ -178,21 +299,37 @@ def parse_output(path, allow_incomplete=False):
         for key in (
             "final_total_energy_ry",
             "electronic_convergence_reached",
-            "ionic_convergence_reached",
-            "maximum_force_ry_bohr",
-            "final_coordinates",
+            "scf_iterations",
+            "wall_time_seconds",
         )
-        if result[key] is None
+        if result[key] is None or (key == "scf_iterations" and result[key] < 1)
     ]
+    if result["calculation"] == "relax":
+        missing.extend(
+            key
+            for key in (
+                "ionic_convergence_reached",
+                "ionic_steps",
+                "final_total_force_ry_bohr",
+                "final_coordinates",
+            )
+            if result[key] is None
+        )
     if not result["job_completed"]:
         missing.append("job_completed")
+    if not result["gpu_acceleration_active"]:
+        missing.append("gpu_acceleration_active")
     if missing:
         raise QEOutputParseError(
             f"Incomplete QE output {path}; missing or unfinished: {', '.join(missing)}"
         )
     if result["electronic_convergence_reached"] is not True:
         raise QEOutputParseError(f"QE output {path} indicates SCF convergence failure.")
-    if result["ionic_convergence_reached"] is not True:
+    if result["all_electronic_cycles_converged"] is not True:
+        raise QEOutputParseError(
+            f"QE output {path} contains one or more failed SCF cycles."
+        )
+    if result["calculation"] == "relax" and result["ionic_convergence_reached"] is not True:
         raise QEOutputParseError(f"QE output {path} indicates ionic convergence failure.")
 
     return result
@@ -206,10 +343,20 @@ def main():
         action="store_true",
         help="Print partial fields instead of failing on incomplete output.",
     )
+    parser.add_argument(
+        "--calculation",
+        choices=("auto", "scf", "relax"),
+        default="auto",
+        help="Expected calculation type (default: infer from output).",
+    )
     args = parser.parse_args()
 
     try:
-        result = parse_output(args.output, allow_incomplete=args.allow_incomplete)
+        result = parse_output(
+            args.output,
+            allow_incomplete=args.allow_incomplete,
+            calculation=args.calculation,
+        )
     except (OSError, QEOutputParseError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2

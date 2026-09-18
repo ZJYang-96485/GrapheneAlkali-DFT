@@ -15,9 +15,11 @@ ROOT = Path(__file__).resolve().parents[1]
 UNRESOLVED = "__QE_UNRESOLVED__"
 SYSTEM_NAMES = ("pristine", "monovacancy")
 QE_BULK_C_LABEL = "C"
-# QE 7.x limits atomic-type labels to three characters, so the conceptual
-# C_vac label is rendered as C_v in the actual input.
-QE_VACANCY_C_LABEL = "C_v"
+# Use a digit suffix for the second carbon type. QE accepts labels such as C1,
+# and its bundled DFT-D3 parser then correctly extracts the element C. A letter
+# suffix such as C_v is misread as the nonexistent element "Cv".
+QE_VACANCY_C_LABEL = "C1"
+MAX_STARTING_DISPLACEMENT_ANGSTROM = 0.05
 
 
 def load_config(path):
@@ -113,19 +115,27 @@ def infer_vacancy_neighbors(pristine, monovacancy):
     if not np.allclose(pristine.cell.array, monovacancy.cell.array, atol=1.0e-7):
         raise ValueError("Vacancy inference requires identical pristine/vacancy cells.")
 
-    nearest_remaining = []
-    for position in pristine.positions:
-        vectors = monovacancy.positions - position
+    matched_pristine_indices = set()
+    for position in monovacancy.positions:
+        vectors = pristine.positions - position
         _, distances = find_mic(vectors, pristine.cell, pbc=pristine.pbc)
-        nearest_remaining.append(float(np.min(distances)))
+        nearest_index = int(np.argmin(distances))
+        nearest_distance = float(distances[nearest_index])
+        if nearest_distance > MAX_STARTING_DISPLACEMENT_ANGSTROM:
+            raise ValueError(
+                "Monovacancy atom is too far from every pristine lattice site: "
+                f"{nearest_distance:.8f} angstrom."
+            )
+        if nearest_index in matched_pristine_indices:
+            raise ValueError("Multiple monovacancy atoms map to one pristine site.")
+        matched_pristine_indices.add(nearest_index)
 
-    missing_index = int(np.argmax(nearest_remaining))
-    missing_distance = nearest_remaining[missing_index]
-    other_distances = np.delete(np.asarray(nearest_remaining), missing_index)
-    if missing_distance < 1.0 or not np.allclose(other_distances, 0.0, atol=1.0e-6):
+    missing_indices = sorted(set(range(len(pristine))) - matched_pristine_indices)
+    if len(missing_indices) != 1:
         raise ValueError(
             "Could not identify one missing pristine lattice site from the structures."
         )
+    missing_index = missing_indices[0]
 
     vacancy_position = pristine.positions[missing_index]
     vectors = monovacancy.positions - vacancy_position
@@ -135,8 +145,8 @@ def infer_vacancy_neighbors(pristine, monovacancy):
     neighbor_distances = distances[list(neighbor_indices)]
     fourth_distance = float(distances[ordered[3]])
 
-    if not np.allclose(neighbor_distances, neighbor_distances[0], atol=1.0e-6):
-        raise ValueError("The three inferred vacancy neighbors are not equidistant.")
+    if np.ptp(neighbor_distances) > MAX_STARTING_DISPLACEMENT_ANGSTROM:
+        raise ValueError("The three inferred vacancy neighbors do not form one shell.")
     if fourth_distance <= float(np.max(neighbor_distances)) + 0.25:
         raise ValueError("Vacancy-neighbor shell is not geometrically well separated.")
 
@@ -177,6 +187,7 @@ def validate_locked_methodology(dft, relaxation):
         "smearing",
         "conv_thr",
         "mixing_beta",
+        "diagonalization",
         "assume_isolated",
     )
     for key in required_dft:
@@ -200,6 +211,8 @@ def validate_locked_methodology(dft, relaxation):
         raise ValueError("Only fixed-cell calculation='relax' is supported.")
     if relaxation.get("ion_dynamics") != "bfgs":
         raise ValueError("Locked ionic dynamics must be BFGS.")
+    if dft.get("diagonalization") != "cg":
+        raise ValueError("Locked electronic diagonalization must use CG.")
 
 
 def render_input(
@@ -234,9 +247,13 @@ def render_input(
     ]
     if is_vacancy:
         lines.append(
-            "! C_v is the QE-valid (3-character) label for vacancy-adjacent C atoms."
+            "! C1 distinguishes vacancy-adjacent C atoms while remaining DFT-D3-safe."
         )
         lines.append("! Starting magnetizations are unconstrained initial seeds only.")
+        seed = system.get("symmetry_breaking_seed")
+        if seed:
+            lines.append(f"! Approved symmetry-breaking seed: {seed}.")
+            lines.append("! QE symmetry remains enabled; a startup symmetry audit is required before continuation.")
 
     lines.extend(
         [
@@ -245,7 +262,8 @@ def render_input(
             f"   calculation = {quoted(relaxation['calculation'])},",
             f"   prefix = {quoted(system['prefix'])},",
             f"   pseudo_dir = {quoted(qe_relative_path(paths['pseudo_dir']))},",
-            f"   outdir = {quoted(qe_relative_path(Path(paths['scratch_root']) / label))},",
+            "   outdir = "
+            f"{quoted(qe_relative_path(system.get('outdir', Path(paths['scratch_root']) / label)))},",
             "   tstress = .true.,",
             "   tprnfor = .true.,",
             f"   forc_conv_thr = {qe_scientific(relaxation['forc_conv_thr'])},",
@@ -289,6 +307,7 @@ def render_input(
             "&ELECTRONS",
             f"   conv_thr = {qe_scientific(dft['conv_thr'])},",
             f"   mixing_beta = {scalar(dft['mixing_beta'])},",
+            f"   diagonalization = {quoted(dft['diagonalization'])},",
             "/",
             "",
             "&IONS",
@@ -361,7 +380,7 @@ def generate(config_path, output_root=None):
         )
         if UNRESOLVED in content:
             raise ValueError(f"{label}: generated input contains {UNRESOLVED}.")
-        target.write_text(content, encoding="utf-8")
+        target.write_text(content, encoding="utf-8", newline="\n")
         generated.append(target)
 
     return generated
