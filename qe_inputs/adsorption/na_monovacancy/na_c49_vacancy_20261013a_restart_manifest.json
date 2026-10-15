@@ -1,0 +1,45 @@
+{
+  "status": "approved checkpoint continuation for the October 13, 2026 RunPod window",
+  "system": "neutral Na/C49 at the reconstructed-vacancy-centred starting site",
+  "run_id": "20261013a",
+  "source_input": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261012a_relax.in",
+  "source_input_sha256": "7a3c827a7138ae3012764a7af8250e88a1db2e0a3f66b85a6f24b306f9bd62d7",
+  "source_manifest": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261012a_manifest.json",
+  "source_manifest_sha256": "53b6d1c9033100e49f7f919415cd9950046adeb645d9c048841e2d5bd9521cf0",
+  "restart_input": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261013a_relax_restart.in",
+  "restart_input_sha256": "7e1c086f7f9cc3d7586044e78966ba23494dcf740b09cc4d1d6bdbf3f6c8dcce",
+  "source_result_root": "results/cloud/20261012_na_c49_deadline_24h",
+  "source_bundle_sha256": "d1e97200926832802c9033cc7b286e4e82a543baa56335bfb747d39c1e525a72f",
+  "checkpoint_identity": {
+    "prefix": "na_c49_vacancy_20261012a_relax",
+    "outdir": "qe_scratch/adsorption/na_c49_vacancy_20261012a_relax",
+    "restart_mode": "restart"
+  },
+  "segment_max_seconds": 14400,
+  "scientific_settings_changed": false,
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "site_literature": [
+    "https://doi.org/10.3390/molecules24040754",
+    "https://doi.org/10.1039/C8NR10383F"
+  ],
+  "method": {
+    "functional": "PBE+D3(BJ)",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_points": [
+      6,
+      6,
+      1,
+      0,
+      0,
+      0
+    ],
+    "smearing": "Marzari-Vanderbilt",
+    "degauss_ry": 0.01,
+    "assume_isolated": "2D",
+    "nspin": 2,
+    "diagonalization": "cg",
+    "forc_conv_thr_ry_bohr": 0.0004
+  },
+  "limitations": "One vacancy-centred starting site and one spin seed; no exhaustive ground-state claim."
+}

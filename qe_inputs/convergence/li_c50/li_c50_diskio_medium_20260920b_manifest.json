@@ -1,0 +1,19 @@
+{
+  "run_id": "20260920b",
+  "purpose": "Single GPU-only disk_io=medium resource diagnostic; not new cutoff-convergence data",
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "baseline_input": "qe_inputs/convergence/li_c50/li_c50_fixed_validation_20260920a_e65_k4.in",
+  "baseline_input_sha256": "ea566c9f47b171d8a58fc61ce95c5a4423a05aa00c906ba6134ad9f61e4b23b1",
+  "baseline_output": "results/convergence/li_c50/li_c50_fixed_validation_20260920a_e65_k4.out",
+  "baseline_output_sha256": "0721af2d308b2a687913f496cbb6fc97ffb969449d672f6cbbe317d08aebf62b",
+  "baseline_energy_ry": -936.965631,
+  "baseline_peak_gpu_mib": 15285,
+  "gpu_total_mib": 16303,
+  "diagnostic_input": "qe_inputs/convergence/li_c50/li_c50_diskio_medium_20260920b_e65_k4.in",
+  "diagnostic_input_sha256": "00e0220b34cea2976904b8fb92da7414bafaf52cc0e971c313cb841109620233",
+  "diagnostic_output": "results/convergence/li_c50/li_c50_diskio_medium_20260920b_e65_k4.out",
+  "qe_executable_sha256": "922fe8820f328e7b63283b9f245dfe2b526fe1be0543a89bcca1f1ef04336fb6",
+  "carbon_upf_md5": "8e281b34a927efac7e739263a90d7aed",
+  "lithium_upf_md5": "e912e257baa3777c20ea3d68f190483c",
+  "comparison": "Same fixed C50+neutral Li geometry, PBE+D3(BJ), 65/520 Ry, 4x4x1, and all numerical settings; only disk_io=medium and isolated identity paths differ."
+}

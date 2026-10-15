@@ -1,0 +1,23 @@
+	Command being timed: "/workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/adsorption/na_pristine_hollow/na_c50_hollow_20260924a_relax_restart2.in"
+	User time (seconds): 17549.25
+	System time (seconds): 305.51
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:58:10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13098836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 482158110
+	Voluntary context switches: 551120
+	Involuntary context switches: 53249
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 656
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

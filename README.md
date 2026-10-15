@@ -14,12 +14,18 @@ workflow for validated 5 x 5 graphene models:
 
 The pristine C50 relaxation is complete. Its ideal starting geometry already
 satisfied the force criterion, so BFGS converged without an ionic displacement.
-The approved C49 monovacancy relaxation is currently running with its 0.01
-angstrom symmetry-breaking seed, isolated scratch directory, resource logs,
-and strict overnight supervisor. It is not accepted until the complete output
-passes every electronic, ionic, GPU, final-energy, and `JOB DONE` gate. The
-lattice and 18 angstrom out-of-plane cell dimension remain fixed. No Li or Na
-atoms are present at this stage.
+The approved C49 monovacancy relaxation also completed: its seeded geometry
+converged after 20 electronic cycles and 19 BFGS steps, with GPU acceleration,
+final energy, and `JOB DONE` verified against the raw output. The lattice and
+18 angstrom out-of-plane cell dimension remain fixed. No Li or Na atoms are
+present in the completed bare-substrate calculations.
+
+For the October 16, 2026 final-project deadline, the time-boxed target is a
+four-system Li/Na single-atom adsorption comparison on C50 and C49. Diffusion
+barriers and broad electronic/coverage studies are deferred. The executable
+scope and fallback gates are in
+`docs/codex_prompts/oct16_2026_final_project_scope.md`; the course rubric
+must be checked before treating this scope as sufficient.
 
 ## Locked methodology
 
@@ -78,9 +84,10 @@ python scripts/parse_qe_output.py \
 ```
 
 The monovacancy symmetry pre-flight and approved seed are recorded in
-`results/phase4/monovacancy_symmetry_preflight.md`. For safe long-running jobs,
-including how to inspect the current compact heartbeat, see
-`docs/OVERNIGHT_WORKFLOW.md`.
+`results/phase4/monovacancy_symmetry_preflight.md`. Its completed raw output
+and relaxed structure are under `results/relaxation/monovacancy/` and
+`structures/relaxed/monovacancy/` locally; they are not yet committed. For
+safe long-running jobs, see `docs/OVERNIGHT_WORKFLOW.md`.
 
 ## GitHub contents
 
@@ -92,11 +99,12 @@ policy.
 
 ## Remaining stages
 
-- completion and strict audit of the active C49 monovacancy relaxation
-- Li and Na adsorption structures and relaxations
-- 9 x 9 x 1 final-SCF energies
-- 12 x 12 x 1 DOS/PDOS calculations
-- 7-image CI-NEB diffusion with 6 x 6 x 1 path optimization and 9 x 9 x 1
-  single-point energies on converged images
+- Before October 16: audit Li/Na pseudopotentials and adsorption methodology;
+  compare one Li or Na atom on pristine C50 and reconstructed C49 at a small
+  set of documented sites; compute internally consistent adsorption energies.
+- If the four primary relaxations finish in time: perform matched 9 x 9 x 1
+  final-SCF calculations after a resource preflight.
+- After the deadline: wider site/coverage and spin-state searches, 12 x 12 x 1
+  DOS/PDOS, and validated 7-image CI-NEB diffusion calculations.
 
 No adsorption, final-SCF, DOS/PDOS, or NEB calculation has been launched.

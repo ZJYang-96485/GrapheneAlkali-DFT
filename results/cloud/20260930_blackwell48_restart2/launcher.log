@@ -1,0 +1,4 @@
+[2026-09-30T18:07:33+00:00] Persistent restart checkpoint verified on mfs#us-ne-1.runpod.net:9421[/networkvolumes/ikljhz724r]
+[2026-09-30T18:07:33+00:00] Safety deadline: 2026-10-01T04:22:33+00:00
+[2026-09-30T18:07:33+00:00] START restart continuation 2
+QE exit=0; strict validation exit=2

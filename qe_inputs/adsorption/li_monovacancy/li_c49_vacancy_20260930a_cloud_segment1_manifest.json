@@ -1,0 +1,82 @@
+{
+  "status": "launched; monitored cloud relaxation segment 1",
+  "system": "neutral Li/C49 at the reconstructed monovacancy-centred starting site",
+  "run_id": "20260930a_cloud_segment1",
+  "purpose": "First restartable production relaxation segment on a 48 GB cloud GPU",
+  "source_structure": "structures/relaxed/monovacancy/graphene_5x5_monovacancy_relaxed.traj",
+  "source_structure_sha256": "09912b5acb49426d15a68b2912b47ab59e8132a01243bb91ad61f199a975db5a",
+  "starting_structure": "structures/adsorption/li_monovacancy/li_c49_vacancy_20260920a_start.traj",
+  "starting_structure_sha256": "f039c572536a3752bb7f6c74487f0104f9caaf2e156c2db0667035c29ea809cd",
+  "parent_relax_input": "qe_inputs/adsorption/li_monovacancy/li_c49_vacancy_20260920a_relax.in",
+  "parent_relax_input_sha256": "83ab69a9631f0842d19e3480118475c3a3d7900190bb913ae2836ea76f148880",
+  "input": "qe_inputs/adsorption/li_monovacancy/li_c49_vacancy_20260930a_cloud_segment1.in",
+  "input_sha256": "0feb7d3b5aef29fae044d0b5234b67e7c6110cfc613e865f24a001a0f8d9c5f2",
+  "scientific_settings": {
+    "charge_e": 0.0,
+    "functional": "PBE",
+    "dispersion": "DFT-D3(BJ), version 4, three-body enabled",
+    "assume_isolated": "2D",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [6, 6, 1],
+    "k_shift": [0, 0, 0],
+    "smearing": "Marzari-Vanderbilt",
+    "degauss_ry": 0.01,
+    "nspin": 2,
+    "starting_magnetization": {
+      "C": 0.0,
+      "C1_vacancy_neighbors": 0.1,
+      "Li": 0.33
+    },
+    "conv_thr_ry": 1e-8,
+    "mixing_beta": 0.3,
+    "diagonalization": "cg",
+    "ion_dynamics": "bfgs",
+    "energy_threshold_ry": 0.0001,
+    "force_threshold_ry_bohr": 0.0004
+  },
+  "execution_settings": {
+    "pod_id": "i9621h1cb61s1q",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+    "gpu_memory_mib": 48512,
+    "pod_hourly_cost_usd": 1.09,
+    "launched_utc": "2026-10-01T00:33:52Z",
+    "restart_mode": "from_scratch",
+    "disk_io": "medium",
+    "max_seconds": 30600,
+    "nstep": 50,
+    "pod_wall_window_seconds": 36000,
+    "remote_guard_seconds": 32400,
+    "platform_auto_stop_configured": false,
+    "platform_stop_note": "The remote guard requests a clean QE checkpoint/exit, but the Pod itself must be stopped through the authenticated Runpod control plane after supervisor_complete.txt appears",
+    "network_volume_id": "ikljhz724r",
+    "qe_executable": "/workspace/q-e-7.6/bin/pw.x"
+  },
+  "environment_preflight": {
+    "qe_commit": "9f93ddec427d2b9a45bb72d828c6d324f62fcabd",
+    "qe_executable_sha256": "0a2699f846329a956f26cec4499bddfc020bb7415b29d5a8fafafcbcdc06fa2e",
+    "required_runtime_packages_restored_after_pod_restart": [
+      "python3",
+      "time",
+      "libopenblas0-pthread",
+      "libfftw3-3"
+    ],
+    "first_environment_probe": "preserved separately as results/cloud/20260930_li_c49_vacancy_segment1_env_failure_20261001T002833Z",
+    "production_gpu_gate": "GPU acceleration is ACTIVE. 1 visible GPUs per MPI rank"
+  },
+  "carbon_upf": "pseudopotentials/C.pbe-n-kjpaw_psl.1.0.0.UPF",
+  "carbon_upf_md5": "8e281b34a927efac7e739263a90d7aed",
+  "li_upf": "pseudopotentials/li_pbe_v1.4.uspp.F.UPF",
+  "li_upf_md5": "e912e257baa3777c20ea3d68f190483c",
+  "validated_fixed_geometry_pilot": {
+    "output": "results/phase5/diagnostics/li_c49_vacancy_20260921a_medium_pilot/li_c49_vacancy_20260921a_medium_pilot.out",
+    "output_sha256": "c7bbd143abb65928a78a3f65332891eb0603c4742d6db87096060d0ba1624563",
+    "energy_ry": -918.02816369,
+    "total_magnetization_bohr_magneton_per_cell": 1.01,
+    "gpu_memory_fraction": 0.9765073912776789
+  },
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "site_literature": "https://doi.org/10.3390/molecules24040754",
+  "magnetism_literature": "https://doi.org/10.1039/C8NR10383F",
+  "limitations": "One vacancy-centred initial Li site and one spin seed; this run alone cannot establish the global adsorption or magnetic ground state"
+}

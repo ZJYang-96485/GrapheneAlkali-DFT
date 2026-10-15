@@ -8,14 +8,19 @@ not machine-specific runtime state.
 - `README.md`, `LICENSE`, `.gitignore`, `.gitattributes`, and
   `requirements.txt`
 - `config/`
-- `docs/GPU_SETUP.md`, `docs/OVERNIGHT_WORKFLOW.md`, and `docs/codex_prompts/`
+- `docs/GPU_SETUP.md`, `docs/OVERNIGHT_WORKFLOW.md`, Phase 5 plans/site
+  proposals, and `docs/codex_prompts/`
 - `scripts/`
-- `structures/pristine/`, `structures/monovacancy/`, and
-  `structures/relaxed/`
-- `qe_inputs/convergence/` and `qe_inputs/relaxation/`
+- `structures/pristine/`, `structures/monovacancy/`, `structures/relaxed/`,
+  and `structures/adsorption/` for accepted or explicitly labeled proposed
+  structures
+- `qe_inputs/convergence/`, `qe_inputs/relaxation/`, and audited
+  `qe_inputs/adsorption/` proposals
 - `results/convergence/`: small raw QE outputs and generated CSV/Markdown
   summaries
 - `results/relaxation/`: production raw outputs and compact reports
+- `results/adsorption/`: accepted complete raw QE outputs and compact
+  analysis; exclude interrupted output until it has been reviewed and curated
 - `results/phase4/ledger.md` and the monovacancy symmetry pre-flight report
 - `figures/convergence/`
 - `pseudopotentials/README.md`, which documents how to obtain the external UPF
@@ -27,6 +32,8 @@ not machine-specific runtime state.
 - pseudopotential binaries (`*.UPF`/`*.upf`)
 - `results/phase4/diagnostics/`, which contains machine-specific telemetry,
   host logs, crash evidence, and duplicated scratch data
+- `results/phase5/diagnostics/`, which contains live Li/Na run status and
+  machine-specific resource telemetry
 - `qe_inputs/diagnostics/` and obsolete exploratory cutoff runs
 - interrupted raw outputs and obsolete duplicate convergence diagnostics; their
   conclusions remain in the compact failure report and Phase 4 ledger

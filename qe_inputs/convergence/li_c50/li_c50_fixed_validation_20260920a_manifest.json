@@ -1,0 +1,395 @@
+{
+  "run_id": "20260920a",
+  "purpose": "Fixed-geometry Li/C50 lower-mesh cutoff sensitivity; not production convergence",
+  "source_input": "qe_inputs/adsorption/li_pristine_hollow/li_c50_hollow_20260919b_12h_relax.in",
+  "source_input_sha256": "f71afda774207d2f7c0851d0cb9c26f767f12bb97c17f68e96711dec8f34ec70",
+  "source_output": "results/adsorption/li_pristine_hollow/li_c50_hollow_20260919b_12h_relax.out",
+  "source_output_sha256": "f07f19c7847c2f81d5f0d14e28c52d1e9ce8669544f9007b4503c793315beab1",
+  "source_analysis": "results/adsorption/li_pristine_hollow/li_c50_hollow_20260919b_12h_analysis.json",
+  "source_analysis_sha256": "56e88d68aee1426887f01debc41e23a6c7bd05efc8f2f6c52f1d2d1a732129f0",
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "atomic_positions": [
+    {
+      "symbol": "C",
+      "x": -0.0004992931,
+      "y": 0.0002882671,
+      "z": 9.005106408,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 1.2298497618,
+      "y": 0.7082267046,
+      "z": 9.0056088928,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -1.2316047413,
+      "y": 2.1293535998,
+      "z": 9.005608557,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -0.0021845759,
+      "y": 2.8376308213,
+      "z": 9.0090523457,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -2.4617543717,
+      "y": 4.260006803,
+      "z": 9.0056088564,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -1.2336115256,
+      "y": 4.9705590514,
+      "z": 9.0090523235,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -3.6900158025,
+      "y": 6.3906715257,
+      "z": 9.0051065891,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -2.4617087932,
+      "y": 7.1022513384,
+      "z": 9.0056086473,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -4.9193560801,
+      "y": 8.5220441112,
+      "z": 9.0034685638,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -3.6900045434,
+      "y": 9.2318334231,
+      "z": 9.0017609859,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 2.4600152647,
+      "y": -0.0007347216,
+      "z": 9.0034685638,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 3.6901201561,
+      "y": 0.7082144334,
+      "z": 9.0056085121,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 1.2285690877,
+      "y": 2.1270640625,
+      "z": 9.009052329,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 2.4599756828,
+      "y": 2.8315893033,
+      "z": 9.0111416555,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -0.0077800985,
+      "y": 4.2563558585,
+      "z": 9.011141775,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 1.2229392296,
+      "y": 4.9669168344,
+      "z": 9.0007971829,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -1.2336502617,
+      "y": 6.3916953187,
+      "z": 9.0090523769,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -0.0077639934,
+      "y": 7.1058908536,
+      "z": 9.0111416331,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -2.4606442191,
+      "y": 8.52206191,
+      "z": 9.0034683531,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -1.2315844806,
+      "y": 9.2328891441,
+      "z": 9.0056086473,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 4.9205082104,
+      "y": 0.0003116626,
+      "z": 9.0051065891,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 6.1495009842,
+      "y": 0.7098249324,
+      "z": 9.0051065372,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 3.6914692083,
+      "y": 2.1270683604,
+      "z": 9.0090523318,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 4.9221711778,
+      "y": 2.8376281074,
+      "z": 9.0090521858,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 2.4600192155,
+      "y": 4.2526919769,
+      "z": 9.0007974813,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 3.6970318886,
+      "y": 4.9669259572,
+      "z": 9.0007972582,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 1.2229470163,
+      "y": 6.395339522,
+      "z": 9.0007975311,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 2.4599934597,
+      "y": 7.1095576093,
+      "z": 9.0007971829,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": -0.00219565,
+      "y": 8.52463727,
+      "z": 9.0090523769,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 1.2285638296,
+      "y": 9.2351718573,
+      "z": 9.0090523235,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 7.3798487054,
+      "y": 0.001938424,
+      "z": 9.0056088564,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 8.6100206995,
+      "y": 0.7108599821,
+      "z": 9.0034688854,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 6.1515874169,
+      "y": 2.1293619389,
+      "z": 9.0056084786,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 7.3806564477,
+      "y": 2.8401843197,
+      "z": 9.0034680695,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 4.9277920292,
+      "y": 4.2563462599,
+      "z": 9.0111415452,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 6.1536275576,
+      "y": 4.9705731311,
+      "z": 9.0090521858,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 3.6970703243,
+      "y": 6.3953273455,
+      "z": 9.0007974813,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 4.9277595678,
+      "y": 7.1059163776,
+      "z": 9.0111416555,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 2.4599976526,
+      "y": 8.5306722987,
+      "z": 9.011141775,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 3.6914473304,
+      "y": 9.2351889476,
+      "z": 9.0090523457,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 9.8401233154,
+      "y": 0.0019241919,
+      "z": 9.005608557,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 11.0705124145,
+      "y": 0.7098449873,
+      "z": 9.0051064982,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 8.6099738157,
+      "y": 2.1304376075,
+      "z": 9.0017610021,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 9.8393875457,
+      "y": 2.8401858176,
+      "z": 9.0034688854,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 7.3817121726,
+      "y": 4.2600005222,
+      "z": 9.0056084786,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 8.6100240675,
+      "y": 4.9715759291,
+      "z": 9.0051065372,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 6.1536393656,
+      "y": 6.391672173,
+      "z": 9.0090523318,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 7.3817283864,
+      "y": 7.1022674501,
+      "z": 9.0056085121,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 4.9221930274,
+      "y": 8.5246083901,
+      "z": 9.009052329,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "C",
+      "x": 6.1515825621,
+      "y": 9.2329179728,
+      "z": 9.0056088928,
+      "units": "angstrom"
+    },
+    {
+      "symbol": "Li",
+      "x": 2.4599998526,
+      "y": 5.6811267351,
+      "z": 10.6974617017,
+      "units": "angstrom"
+    }
+  ],
+  "inputs": {
+    "e65_k4": {
+      "file": "qe_inputs/convergence/li_c50/li_c50_fixed_validation_20260920a_e65_k4.in",
+      "sha256": "ea566c9f47b171d8a58fc61ce95c5a4423a05aa00c906ba6134ad9f61e4b23b1",
+      "ecutwfc_ry": 65,
+      "ecutrho_ry": 520,
+      "k_mesh": [
+        4,
+        4,
+        1
+      ]
+    },
+    "e70_k4": {
+      "file": "qe_inputs/convergence/li_c50/li_c50_fixed_validation_20260920a_e70_k4.in",
+      "sha256": "b3d3498328065c2223792bd39817c6302d6d690cbfc7207232391b9ed4854ca8",
+      "ecutwfc_ry": 70,
+      "ecutrho_ry": 560,
+      "k_mesh": [
+        4,
+        4,
+        1
+      ]
+    }
+  },
+  "second_case_peak_vram_ceiling": 0.88
+}

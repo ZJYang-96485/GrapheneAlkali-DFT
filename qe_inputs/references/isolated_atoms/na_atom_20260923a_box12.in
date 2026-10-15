@@ -1,0 +1,45 @@
+! Cost-aware neutral isolated Na-atom pilot in a 12 Angstrom cubic box.
+! Method, conditional sequence, and literature: docs/PHASE5_ISOLATED_ATOM_REFERENCE_PLAN.md
+&CONTROL
+   calculation = 'scf',
+   prefix = 'na_atom_20260923a_box12',
+   pseudo_dir = './pseudopotentials',
+   outdir = './qe_scratch/references/na_atom_20260923a_box12',
+   tstress = .false.,
+   tprnfor = .true.,
+   max_seconds = 1800,
+/
+&SYSTEM
+   ibrav = 0,
+   nat = 1,
+   ntyp = 1,
+   tot_charge = 0.0,
+   input_dft = 'PBE',
+   vdw_corr = 'dft-d3',
+   dftd3_version = 4,
+   dftd3_threebody = .true.,
+   assume_isolated = 'mt',
+   ecutwfc = 65,
+   ecutrho = 520,
+   nspin = 2,
+   tot_magnetization = 1.0,
+   occupations = 'fixed',
+/
+&ELECTRONS
+   conv_thr = 1.0d-8,
+   mixing_beta = 0.3,
+   diagonalization = 'cg',
+/
+
+ATOMIC_SPECIES
+Na 22.98976928 na_pbe_v1.5.uspp.F.UPF
+
+CELL_PARAMETERS angstrom
+12.0  0.0  0.0
+ 0.0 12.0  0.0
+ 0.0  0.0 12.0
+
+ATOMIC_POSITIONS angstrom
+Na 6.0 6.0 6.0
+
+K_POINTS gamma

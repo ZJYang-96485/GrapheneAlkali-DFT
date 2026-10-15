@@ -32,6 +32,7 @@ pseudopotentials/*.upf
 
 # Machine-specific execution diagnostics and restart data
 /results/phase4/diagnostics/
+/results/phase5/diagnostics/
 /qe_inputs/diagnostics/
 /results/convergence/pristine/diagnostics/
 /results/convergence/pristine/cutoff_reference/

@@ -1,0 +1,38 @@
+{
+  "status": "approved for the October 12-13, 2026 guarded 24-hour RunPod window",
+  "system": "neutral Na/C49 at the reconstructed-vacancy-centred starting site",
+  "run_id": "20261012a",
+  "source_pilot": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261001a_cloud_pilot.in",
+  "source_pilot_sha256": "5f9552b398309d89ad6c0c4a72919a15842d56f49bceeb0070adf3006a31c379",
+  "source_manifest": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261001a_cloud_pilot_manifest.json",
+  "source_manifest_sha256": "7562536ed74f15ecaafc3b12030b244f4bfe07ea7d183a370c8b2887bade8b43",
+  "pilot_input": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261012a_pilot.in",
+  "pilot_input_sha256": "25b309ba58304bcc24e541160b656051a8231b5e3035917c7832f5cf882b9682",
+  "relax_input": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261012a_relax.in",
+  "relax_input_sha256": "7a3c827a7138ae3012764a7af8250e88a1db2e0a3f66b85a6f24b306f9bd62d7",
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "site_literature": [
+    "https://doi.org/10.3390/molecules24040754",
+    "https://doi.org/10.1039/C8NR10383F"
+  ],
+  "method": {
+    "functional": "PBE+D3(BJ)",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_points": [
+      6,
+      6,
+      1,
+      0,
+      0,
+      0
+    ],
+    "smearing": "Marzari-Vanderbilt",
+    "degauss_ry": 0.01,
+    "assume_isolated": "2D",
+    "nspin": 2,
+    "diagonalization": "cg",
+    "forc_conv_thr_ry_bohr": 0.0004
+  },
+  "limitations": "One vacancy-centred starting site and one spin seed; no exhaustive ground-state claim."
+}

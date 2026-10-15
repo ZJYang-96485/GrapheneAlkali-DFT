@@ -47,7 +47,9 @@ def parse_scf_iterations(text):
 
 def duration_seconds(value):
     factors = {"d": 86400.0, "h": 3600.0, "m": 60.0, "s": 1.0}
-    parts = re.findall(rf"({FLOAT})\s*([dhms])", value, re.IGNORECASE)
+    # QE prints compact durations such as "1d19h 5m".  Do not parse the
+    # "d19" in that string as a Fortran D-exponent.
+    parts = re.findall(r"(\d+(?:\.\d+)?)\s*([dhms])", value, re.IGNORECASE)
     if not parts:
         return None
     return sum(as_float(number) * factors[unit.lower()] for number, unit in parts)
@@ -116,21 +118,30 @@ def parse_electronic_convergence(text):
 
 
 def parse_ionic_convergence(text):
-    if re.search(
-        r"maximum number of (?:bfgs |ionic )?steps has been reached|"
-        r"bfgs.*(?:not converged|failed)",
-        text,
-        re.IGNORECASE,
-    ):
-        return False
-    if re.search(
-        r"bfgs converged|End of BFGS Geometry Optimization|"
-        r"ionic convergence has been achieved",
-        text,
-        re.IGNORECASE,
-    ):
-        return True
-    return None
+    """Return the last explicit terminal ionic-convergence outcome.
+
+    QE may print recoverable warnings such as ``bfgs curvature condition
+    failed`` before the optimizer ultimately converges.  Those warnings are
+    not terminal outcomes, and an earlier failure marker in a concatenated or
+    restarted output must not override a later convergence marker.
+    """
+    outcomes = []
+    patterns = (
+        (
+            r"^\s*(?:the\s+)?maximum number of (?:bfgs |ionic )?steps has been reached",
+            False,
+        ),
+        (r"^\s*bfgs\s+(?:not converged|failed)\b", False),
+        (r"\bbfgs converged\b", True),
+        (r"End of BFGS Geometry Optimization", True),
+        (r"ionic convergence has been achieved", True),
+    )
+    for pattern, outcome in patterns:
+        outcomes.extend(
+            (match.start(), outcome)
+            for match in re.finditer(pattern, text, re.IGNORECASE | re.MULTILINE)
+        )
+    return max(outcomes, key=lambda item: item[0])[1] if outcomes else None
 
 
 def parse_ionic_steps(text):
@@ -184,6 +195,25 @@ def maximum_force(forces):
         ** 0.5
         for entry in forces
     )
+
+
+def maximum_force_component(forces):
+    if not forces:
+        return None
+    return max(
+        abs(entry[component])
+        for entry in forces
+        for component in ("fx_ry_bohr", "fy_ry_bohr", "fz_ry_bohr")
+    )
+
+
+def parse_gradient_error(text):
+    matches = re.findall(
+        rf"^\s*Gradient error\s*=\s*({FLOAT})\s+Ry/Bohr",
+        text,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return as_float(matches[-1]) if matches else None
 
 
 def parse_coordinate_block(section, units):
@@ -277,6 +307,8 @@ def parse_text(text, path, calculation="auto"):
         "fermi_energy_ev": parse_fermi_energy(text),
         "final_total_force_ry_bohr": parse_total_force(text),
         "maximum_force_ry_bohr": maximum_force(forces),
+        "maximum_force_component_ry_bohr": maximum_force_component(forces),
+        "gradient_error_ry_bohr": parse_gradient_error(text),
         "final_forces": forces,
         "final_coordinates": parse_final_coordinates(text),
         "total_magnetization_bohr_magneton_per_cell": parse_total_magnetization(text),

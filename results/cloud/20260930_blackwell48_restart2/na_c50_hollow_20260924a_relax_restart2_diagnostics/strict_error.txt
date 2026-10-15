@@ -1,0 +1,1 @@
+error: QE output /workspace/GrapheneAlkali-DFT/results/cloud/20260930_blackwell48_restart2/na_c50_hollow_20260924a_relax_restart2.out indicates ionic convergence failure.

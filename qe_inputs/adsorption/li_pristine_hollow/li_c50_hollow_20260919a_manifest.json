@@ -1,0 +1,23 @@
+{
+  "run_id": "20260919a",
+  "system": "neutral Li/C50 above central pristine hollow site",
+  "source_structure": "structures/relaxed/pristine/graphene_5x5_pristine_relaxed.traj",
+  "source_structure_sha256": "5fd901b075b51c91125c8c1001c4268a585ae5a885f5ff240ece19ac4a7251a8",
+  "source_qe_output": "results/relaxation/pristine/relax_pristine_65_520_cg_20260916.out",
+  "li_upf": "li_pbe_v1.4.uspp.F.UPF",
+  "li_upf_md5": "e912e257baa3777c20ea3d68f190483c",
+  "initial_li_position_angstrom": [
+    2.460000000000001,
+    5.6811266488259164,
+    11.0
+  ],
+  "initial_height_above_mean_carbon_plane_angstrom": 2.0,
+  "starting_structure": "structures/adsorption/li_pristine_hollow/li_c50_hollow_20260919a_start.traj",
+  "starting_structure_sha256": "28a6c6009f8b97923c139f6c153671972af2579bd8ef0133f8f42bd5e012297c",
+  "pilot_input": "qe_inputs/adsorption/li_pristine_hollow/li_c50_hollow_20260919a_pilot.in",
+  "pilot_input_sha256": "055cfaf2ed837181a94a685f863feb6a7789682e181d4bc7bd90413a4199d0cd",
+  "relax_input": "qe_inputs/adsorption/li_pristine_hollow/li_c50_hollow_20260919a_relax.in",
+  "relax_input_sha256": "efa3d653f26642b483a341b0d0f7c4590fb98aa277dc093bf5ee5cb82ef59de7",
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "scope": "single pilot, then one gated relaxation; not adsorption-energy convergence data"
+}

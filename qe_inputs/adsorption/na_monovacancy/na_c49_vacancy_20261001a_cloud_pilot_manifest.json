@@ -1,0 +1,56 @@
+{
+  "status": "conditionally armed; not launched unless Li/C49 first reaches strict convergence",
+  "system": "neutral Na/C49 above the reconstructed monovacancy-centred starting site",
+  "run_id": "20261001a_cloud_pilot",
+  "purpose": "Fixed-geometry resource and SCF pilot after the primary Li/C49 task",
+  "source_structure": "structures/relaxed/monovacancy/graphene_5x5_monovacancy_relaxed.traj",
+  "source_structure_sha256": "09912b5acb49426d15a68b2912b47ab59e8132a01243bb91ad61f199a975db5a",
+  "input": "qe_inputs/adsorption/na_monovacancy/na_c49_vacancy_20261001a_cloud_pilot.in",
+  "input_sha256": "5f9552b398309d89ad6c0c4a72919a15842d56f49bceeb0070adf3006a31c379",
+  "initial_na_position_angstrom": [3.6903358092, 4.9818837374, 11.5],
+  "initial_height_above_carbon_plane_angstrom": 2.5,
+  "scientific_settings": {
+    "calculation": "scf",
+    "charge_e": 0.0,
+    "functional": "PBE",
+    "dispersion": "DFT-D3(BJ), version 4, three-body enabled",
+    "assume_isolated": "2D",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "k_mesh": [6, 6, 1],
+    "k_shift": [0, 0, 0],
+    "smearing": "Marzari-Vanderbilt",
+    "degauss_ry": 0.01,
+    "nspin": 2,
+    "starting_magnetization": {
+      "C": 0.0,
+      "C1_vacancy_neighbors": 0.1,
+      "Na": 0.11
+    },
+    "conv_thr_ry": 1e-8,
+    "mixing_beta": 0.3,
+    "diagonalization": "cg"
+  },
+  "execution_settings": {
+    "pod_id": "i9621h1cb61s1q",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+    "gpu_memory_mib": 48512,
+    "pod_hourly_cost_usd": 1.09,
+    "fresh_prefix": "na_c49_vacancy_20261001a_pilot",
+    "max_seconds": 14400,
+    "absolute_safety_deadline_utc": "2026-10-01T13:40:00Z",
+    "launch_gate": "Li/C49 must first pass GPU, all-electronic-cycle, ionic-convergence, final-energy/force, and JOB DONE validation; at least 1800 seconds must remain"
+  },
+  "carbon_upf": "pseudopotentials/C.pbe-n-kjpaw_psl.1.0.0.UPF",
+  "carbon_upf_md5": "8e281b34a927efac7e739263a90d7aed",
+  "carbon_upf_sha256": "4a6a2769c75af1b1532d65ea364949401cf504968234800bbc352a4fea77fd78",
+  "na_upf": "pseudopotentials/na_pbe_v1.5.uspp.F.UPF",
+  "na_upf_md5": "44600605ef58000f06b90626533354dc",
+  "na_upf_sha256": "f84820c4280d21603bd50ae76a08e15c26864391ea055cf50affc4aedefc8f87",
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "site_literature": [
+    "https://doi.org/10.3390/molecules24040754",
+    "https://doi.org/10.3390/ma8095297"
+  ],
+  "limitations": "One vacancy-centred initial Na site and one spin seed; a passed fixed-geometry pilot is only a gate for a later relaxation and cannot establish the adsorption or magnetic ground state"
+}

@@ -48,7 +48,29 @@ output, and ignored resource logs before deciding whether a restart is safe.
 
 ## After the overnight run
 
-First audit the final vacancy reconstruction, forces, energy, magnetization, and
-resource logs, then finish the Phase 4 report and GitHub cleanup. Stop there for
-review. Li/Na adsorption structures or calculations require a separately approved,
-literature-supported Phase 5 plan.
+For the historical vacancy run, first audit the final reconstruction, forces,
+energy, magnetization, and resource logs. Its accepted result is not permission
+to launch arbitrary Li/Na jobs; the one separately approved Phase 5 job is
+specified below.
+
+## First neutral Li/C50 adsorption run
+
+The first Phase 5 Li run was separately approved. Its source list and scientific
+scope are kept in `docs/codex_prompts/oct16_2026_final_project_scope.md`.
+`scripts/prepare_li_pristine_hollow.py` records the verified central hollow
+geometry, pseudopotential MD5, and both input hashes in a run manifest.
+`scripts/run_li_pristine_hollow_overnight.py` runs a fresh fixed-geometry GPU
+pilot and starts **one** fixed-cell relaxation only if the strict pilot and
+GPU-memory gates pass. No Na or vacancy job is queued. Check a run with:
+
+```bash
+cd ~/GrapheneAlkali-DFT
+python3 -m json.tool \
+  results/phase5/diagnostics/li_c50_hollow_20260919a/status.json
+```
+
+The per-second GPU, RAM/swap, and process logs live beside `status.json` and
+are ignored by Git. Pilot raw output is diagnostic only. The production raw
+relaxation output is under `results/adsorption/li_pristine_hollow/` and must
+not be interpreted as an adsorption energy before matched reference and
+adsorbate-convergence checks.

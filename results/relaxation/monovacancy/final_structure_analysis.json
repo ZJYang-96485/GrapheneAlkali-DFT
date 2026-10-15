@@ -1,0 +1,776 @@
+{
+  "qe_output": "results/relaxation/monovacancy/relax_monovacancy_65_520_cg_seed001_c1_20260917.out",
+  "qe_output_sha256": "ed8e249b23d9d6fb6e82c1b8b0cd30279e63440715ca54f6fba1937671741f06",
+  "template": "structures/monovacancy/graphene_5x5_monovacancy_seeded_0p01A.xyz",
+  "template_sha256": "7f0e606fb9a1e9d132480c7eb915ecf7ff7053e9c23d6d6d1187985b7b28d301",
+  "atom_count": 49,
+  "maximum_displacement_angstrom": 0.19258032096605576,
+  "rms_displacement_angstrom": 0.0654459385250705,
+  "maximum_out_of_plane_displacement_angstrom": 0.0,
+  "qe_result": {
+    "file": "results/relaxation/monovacancy/relax_monovacancy_65_520_cg_seed001_c1_20260917.out",
+    "calculation": "relax",
+    "job_completed": true,
+    "gpu_acceleration_active": true,
+    "electronic_convergence_reached": true,
+    "electronic_convergence_events": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "electronic_converged_cycles": 20,
+    "electronic_failed_cycles": 0,
+    "all_electronic_cycles_converged": true,
+    "scf_iterations": 352,
+    "wall_time_seconds": 3.6e+22,
+    "ionic_convergence_reached": true,
+    "ionic_relaxation_completed": true,
+    "ionic_steps": 19,
+    "final_total_energy_ry": -903.50175873,
+    "smearing_contribution_ry": -0.00054432,
+    "internal_energy_ry": -903.50121441,
+    "fermi_energy_ev": -4.5494,
+    "final_total_force_ry_bohr": 0.001093,
+    "maximum_force_ry_bohr": 0.0003284056645370174,
+    "final_forces": [
+      {
+        "atom": 1,
+        "type": 1,
+        "fx_ry_bohr": -2.943e-05,
+        "fy_ry_bohr": -2.9e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 2,
+        "type": 1,
+        "fx_ry_bohr": 6.757e-05,
+        "fy_ry_bohr": -2.808e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 3,
+        "type": 1,
+        "fx_ry_bohr": -0.0001208,
+        "fy_ry_bohr": 7.87e-06,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 4,
+        "type": 1,
+        "fx_ry_bohr": -7e-07,
+        "fy_ry_bohr": -1.792e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 5,
+        "type": 1,
+        "fx_ry_bohr": -6.642e-05,
+        "fy_ry_bohr": 0.00019564,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 6,
+        "type": 1,
+        "fx_ry_bohr": -0.00010133,
+        "fy_ry_bohr": 2.7e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 7,
+        "type": 1,
+        "fx_ry_bohr": -9.332e-05,
+        "fy_ry_bohr": -5.005e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 8,
+        "type": 1,
+        "fx_ry_bohr": 7.412e-05,
+        "fy_ry_bohr": -1.732e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 9,
+        "type": 1,
+        "fx_ry_bohr": -0.00012393,
+        "fy_ry_bohr": 2.819e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 10,
+        "type": 1,
+        "fx_ry_bohr": 0.00015738,
+        "fy_ry_bohr": 8.327e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 11,
+        "type": 1,
+        "fx_ry_bohr": 6.68e-05,
+        "fy_ry_bohr": 4.561e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 12,
+        "type": 1,
+        "fx_ry_bohr": 1.685e-05,
+        "fy_ry_bohr": 0.00015606,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 13,
+        "type": 1,
+        "fx_ry_bohr": -0.00015443,
+        "fy_ry_bohr": 6.255e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 14,
+        "type": 1,
+        "fx_ry_bohr": -3.069e-05,
+        "fy_ry_bohr": 8.264e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 15,
+        "type": 1,
+        "fx_ry_bohr": -0.00012591,
+        "fy_ry_bohr": 1.684e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 16,
+        "type": 1,
+        "fx_ry_bohr": 1.313e-05,
+        "fy_ry_bohr": -3.003e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 17,
+        "type": 1,
+        "fx_ry_bohr": 0.00013616,
+        "fy_ry_bohr": -9.258e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 18,
+        "type": 1,
+        "fx_ry_bohr": 6.759e-05,
+        "fy_ry_bohr": -0.00012006,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 19,
+        "type": 1,
+        "fx_ry_bohr": 7.204e-05,
+        "fy_ry_bohr": 1.26e-06,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 20,
+        "type": 1,
+        "fx_ry_bohr": 0.00012664,
+        "fy_ry_bohr": 5.319e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 21,
+        "type": 1,
+        "fx_ry_bohr": -2.949e-05,
+        "fy_ry_bohr": 7.618e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 22,
+        "type": 1,
+        "fx_ry_bohr": -0.00010202,
+        "fy_ry_bohr": 7.521e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 23,
+        "type": 1,
+        "fx_ry_bohr": -0.00012148,
+        "fy_ry_bohr": -8.84e-06,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 24,
+        "type": 1,
+        "fx_ry_bohr": -6.041e-05,
+        "fy_ry_bohr": 0.00022635,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 25,
+        "type": 2,
+        "fx_ry_bohr": 4.476e-05,
+        "fy_ry_bohr": -0.00018198,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 26,
+        "type": 1,
+        "fx_ry_bohr": -2.829e-05,
+        "fy_ry_bohr": -0.00020839,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 27,
+        "type": 1,
+        "fx_ry_bohr": 0.00017966,
+        "fy_ry_bohr": 1.596e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 28,
+        "type": 1,
+        "fx_ry_bohr": 0.00030382,
+        "fy_ry_bohr": -2.985e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 29,
+        "type": 1,
+        "fx_ry_bohr": 7.712e-05,
+        "fy_ry_bohr": -7.194e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 30,
+        "type": 1,
+        "fx_ry_bohr": -4.86e-06,
+        "fy_ry_bohr": -1.335e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 31,
+        "type": 1,
+        "fx_ry_bohr": -0.0001961,
+        "fy_ry_bohr": -2.905e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 32,
+        "type": 1,
+        "fx_ry_bohr": -4.406e-05,
+        "fy_ry_bohr": 0.00018882,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 33,
+        "type": 1,
+        "fx_ry_bohr": -0.0002159,
+        "fy_ry_bohr": 5.942e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 34,
+        "type": 2,
+        "fx_ry_bohr": -0.00022672,
+        "fy_ry_bohr": -0.00014722,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 35,
+        "type": 1,
+        "fx_ry_bohr": -9.538e-05,
+        "fy_ry_bohr": 6.09e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 36,
+        "type": 2,
+        "fx_ry_bohr": 0.00015604,
+        "fy_ry_bohr": 4.48e-06,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 37,
+        "type": 1,
+        "fx_ry_bohr": -0.00011779,
+        "fy_ry_bohr": 7.996e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 38,
+        "type": 1,
+        "fx_ry_bohr": 0.00023106,
+        "fy_ry_bohr": -0.00023337,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 39,
+        "type": 1,
+        "fx_ry_bohr": -1.232e-05,
+        "fy_ry_bohr": -0.00021788,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 40,
+        "type": 1,
+        "fx_ry_bohr": 2.938e-05,
+        "fy_ry_bohr": -4.171e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 41,
+        "type": 1,
+        "fx_ry_bohr": 2.896e-05,
+        "fy_ry_bohr": 1.342e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 42,
+        "type": 1,
+        "fx_ry_bohr": -0.00011277,
+        "fy_ry_bohr": 4.931e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 43,
+        "type": 1,
+        "fx_ry_bohr": -0.00015383,
+        "fy_ry_bohr": -4.551e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 44,
+        "type": 1,
+        "fx_ry_bohr": 1.023e-05,
+        "fy_ry_bohr": 0.00017146,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 45,
+        "type": 1,
+        "fx_ry_bohr": 7.743e-05,
+        "fy_ry_bohr": 4.009e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 46,
+        "type": 1,
+        "fx_ry_bohr": 0.00018615,
+        "fy_ry_bohr": -3.749e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 47,
+        "type": 1,
+        "fx_ry_bohr": 0.00015004,
+        "fy_ry_bohr": 3.791e-05,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 48,
+        "type": 1,
+        "fx_ry_bohr": 3.699e-05,
+        "fy_ry_bohr": -0.0001754,
+        "fz_ry_bohr": 0.0
+      },
+      {
+        "atom": 49,
+        "type": 1,
+        "fx_ry_bohr": 5.846e-05,
+        "fy_ry_bohr": -3.259e-05,
+        "fz_ry_bohr": 0.0
+      }
+    ],
+    "final_coordinates": [
+      {
+        "symbol": "C",
+        "x": 0.0070461213,
+        "y": 0.0168544729,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 1.2434173262,
+        "y": 0.7067353339,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -1.2169953963,
+        "y": 2.1535560015,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 0.0352338695,
+        "y": 2.8509124795,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -2.4594621578,
+        "y": 4.2677692043,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -1.1890524394,
+        "y": 4.9635744555,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -3.7061985548,
+        "y": 6.3753265254,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -2.4602234052,
+        "y": 7.0755754784,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -4.9340803945,
+        "y": 8.5063689103,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -3.6974243244,
+        "y": 9.2009477614,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 2.4533752101,
+        "y": -0.0353319699,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 3.6901524538,
+        "y": 0.6591784857,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 1.2542362069,
+        "y": 2.1297588642,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 2.5046716526,
+        "y": 2.8172172025,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 0.0888362525,
+        "y": 4.2647976336,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 1.3882274249,
+        "y": 4.9623559897,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -1.2140117965,
+        "y": 6.3756130012,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 0.0292933851,
+        "y": 7.0778163095,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -2.4603170854,
+        "y": 8.4929281068,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": -1.2231912268,
+        "y": 9.2010568306,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 4.926790943,
+        "y": -0.0353371623,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 6.137176705,
+        "y": 0.7064118526,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 3.6905196573,
+        "y": 2.049286926,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 4.8767155402,
+        "y": 2.8165495839,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C1",
+        "x": 2.6458355315,
+        "y": 4.2059622092,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 1.2694637088,
+        "y": 6.3883606056,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 2.4686464101,
+        "y": 7.1494218335,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 0.0135400322,
+        "y": 8.5067662381,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 1.2250387268,
+        "y": 9.2517706751,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 7.3735289598,
+        "y": 0.0169035342,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 8.603543407,
+        "y": 0.7371248227,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 6.1271110958,
+        "y": 2.1292284851,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 7.3461969944,
+        "y": 2.8504248122,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C1",
+        "x": 4.7356547357,
+        "y": 4.205131405,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 5.9926314513,
+        "y": 4.9616525635,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C1",
+        "x": 3.6895171603,
+        "y": 6.5345575981,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 4.9108029328,
+        "y": 7.1487666737,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 2.4608886866,
+        "y": 8.5694981685,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 3.6899824391,
+        "y": 9.2737278843,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 9.8403731179,
+        "y": 0.0385815998,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 11.0773830563,
+        "y": 0.737188552,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 8.5985376478,
+        "y": 2.1533966974,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 9.8407785777,
+        "y": 2.8533313994,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 7.2922594661,
+        "y": 4.2642273092,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 8.5698122323,
+        "y": 4.9632697396,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 6.1101685609,
+        "y": 6.3876919806,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 7.3502139794,
+        "y": 7.0772951296,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 4.9187081139,
+        "y": 8.5690686765,
+        "z": 9.0,
+        "units": "angstrom"
+      },
+      {
+        "symbol": "C",
+        "x": 6.154647008,
+        "y": 9.2515133596,
+        "z": 9.0,
+        "units": "angstrom"
+      }
+    ],
+    "total_magnetization_bohr_magneton_per_cell": 1.6,
+    "absolute_magnetization_bohr_magneton_per_cell": 2.09
+  },
+  "vacancy": {
+    "position_angstrom": [
+      3.69,
+      4.970985817722678,
+      9.0
+    ],
+    "neighbor_indices_zero_based": [
+      24,
+      33,
+      35
+    ],
+    "neighbor_indices_qe_one_based": [
+      25,
+      34,
+      36
+    ],
+    "initial_neighbor_to_vacancy_distances_angstrom": [
+      1.4116302615056997,
+      1.4202816605161976,
+      1.420281662277322
+    ],
+    "final_neighbor_pair_distances_angstrom": [
+      2.0898193693424174,
+      2.551789142445152,
+      2.5535524697495737
+    ]
+  },
+  "relaxed_traj": "structures/relaxed/monovacancy/graphene_5x5_monovacancy_relaxed.traj",
+  "relaxed_traj_sha256": "09912b5acb49426d15a68b2912b47ab59e8132a01243bb91ad61f199a975db5a",
+  "relaxed_xyz": "structures/relaxed/monovacancy/graphene_5x5_monovacancy_relaxed.xyz",
+  "relaxed_xyz_sha256": "90cdd4252fb8bc2f56b5fe8f38121d0ec795c2b1cc9f9279019f19c4e27acad7"
+}

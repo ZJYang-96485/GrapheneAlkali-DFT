@@ -1,0 +1,42 @@
+{
+  "status": "prepared; launch only after remote checkpoint and prior-result audit",
+  "system": "neutral Li/C49 reconstructed-monovacancy relaxation continuation",
+  "run_id": "20261007a_cloud_18h",
+  "purpose": "Use one 18-hour cloud window to finish the primary Li/C49 relaxation without changing scientific settings",
+  "restart_input": "qe_inputs/adsorption/li_monovacancy/li_c49_vacancy_20261001a_cloud_segment2_restart.in",
+  "restart_input_sha256": "888e948459f77b4ec123d05ad8f7c980a640ba7a79705d55452fc23905b99592",
+  "scientific_settings_unchanged": true,
+  "execution_settings": {
+    "pod_id": "7qnzdeswypoz58",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+    "gpu_memory_gb": 48,
+    "pod_hourly_cost_usd": 1.09,
+    "network_volume_id": "ikljhz724r",
+    "mount_path": "/workspace",
+    "qe_window_seconds_maximum": 61200,
+    "qe_window_hours_maximum": 17,
+    "pod_started_utc": "2026-10-07T07:43:50.623Z",
+    "absolute_qe_guard_utc": "2026-10-08T00:43:50Z",
+    "absolute_pod_review_utc": "2026-10-08T01:43:50Z",
+    "window_policy": "At launch, WINDOW_SECONDS is reduced to the remaining time before absolute_qe_guard_utc so image-pull and setup time count toward the 18-hour pod window",
+    "pod_review_window_hours": 18,
+    "restart_prefix": "li_c49_vacancy_20260930a_relax",
+    "scratch": "qe_scratch/adsorption/li_c49_vacancy_20260930a_relax"
+  },
+  "launch_gates": [
+    "no prior Li/C49 output passes strict ionic-convergence validation",
+    "GPU is visible and Quantum ESPRESSO reports GPU acceleration active",
+    "wavefunction, charge-density, and BFGS checkpoints exist and are nonempty",
+    "no pw.x process is already running",
+    "fresh result directory"
+  ],
+  "acceptance_gates": [
+    "GPU acceleration active",
+    "all electronic cycles converged",
+    "ionic convergence reached",
+    "final total energy and forces printed",
+    "JOB DONE present"
+  ],
+  "reference_list": "docs/codex_prompts/oct16_2026_final_project_scope.md",
+  "limitations": "This is a restart continuation of one vacancy-centred site and one spin seed; it does not sample alternative adsorption or magnetic minima"
+}

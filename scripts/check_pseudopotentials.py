@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the configured SSSP pseudopotential files for the current phase."""
+"""Audit configured SSSP pseudopotentials; --require selects mandatory files."""
 
 import argparse
 import hashlib
@@ -11,7 +11,6 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CURRENTLY_REQUIRED = {"C"}
 APPROVED_CURRENT = {
     "C": {
         "filename": "C.pbe-n-kjpaw_psl.1.0.0.UPF",
@@ -19,7 +18,27 @@ APPROVED_CURRENT = {
         "element": "C",
         "pseudo_type": "PAW",
         "input_dft": "PBE",
-    }
+    },
+    "Li": {
+        "filename": "li_pbe_v1.4.uspp.F.UPF",
+        "md5": "e912e257baa3777c20ea3d68f190483c",
+        "element": "Li",
+        "pseudo_type": "US",
+        "input_dft": "PBE",
+        "z_valence": 3.0,
+        "sssp_cutoff_wfc": 40.0,
+        "sssp_cutoff_rho": 320.0,
+    },
+    "Na": {
+        "filename": "na_pbe_v1.5.uspp.F.UPF",
+        "md5": "44600605ef58000f06b90626533354dc",
+        "element": "Na",
+        "pseudo_type": "US",
+        "input_dft": "PBE",
+        "z_valence": 9.0,
+        "sssp_cutoff_wfc": 40.0,
+        "sssp_cutoff_rho": 320.0,
+    },
 }
 
 
@@ -47,9 +66,38 @@ def audit_required_upf(element, path, filename):
         )
 
     text = path.read_text(encoding="utf-8", errors="replace")
+    if "<PP_INFO>" not in text:
+        raise ValueError(f"{element}: UPF is missing PP_INFO")
+    if element in ("Li", "Na"):
+        header_match = re.search(r"<PP_HEADER>(.*?)</PP_HEADER>", text, re.DOTALL)
+        if not header_match:
+            raise ValueError(f"{element}: legacy UPF is missing PP_HEADER")
+        header = header_match.group(1)
+        if not re.search(rf"^\s*{element}\s+Element\s*$", header, re.MULTILINE):
+            raise ValueError(f"{element}: legacy UPF element mismatch")
+        if not re.search(r"^\s*US\s+Ultrasoft pseudopotential\s*$", header, re.MULTILINE):
+            raise ValueError(f"{element}: legacy UPF is not ultrasoft")
+        if not re.search(r"^\s*SLA\s+PW\s+PBX\s+PBC\s+PBE\s+Exchange-Correlation functional\s*$",
+                         header, re.MULTILINE):
+            raise ValueError(f"{element}: legacy UPF does not declare PBE")
+        valence = re.search(r"^\s*([0-9.]+)\s+Z valence\s*$", header, re.MULTILINE)
+        if not valence or float(valence.group(1)) != approved["z_valence"]:
+            raise ValueError(f"{element}: legacy UPF valence mismatch")
+        return {
+            "md5": digest,
+            "element": element,
+            "pseudo_type": "US",
+            "functional": "PBE",
+            "input_dft": "PBE",
+            "z_valence": float(valence.group(1)),
+            "wfc_cutoff": approved["sssp_cutoff_wfc"],
+            "rho_cutoff": approved["sssp_cutoff_rho"],
+            "cutoff_source": "SSSP 1.0 library metadata",
+        }
+
     header_match = re.search(r"<PP_HEADER\b(.*?)/>", text, re.IGNORECASE | re.DOTALL)
-    if not header_match or "<PP_INFO>" not in text:
-        raise ValueError(f"{element}: UPF is missing PP_HEADER or PP_INFO")
+    if not header_match:
+        raise ValueError(f"{element}: UPF is missing XML PP_HEADER")
     attributes = {
         match.group(1): match.group(3)
         for match in re.finditer(
@@ -98,6 +146,7 @@ def audit_required_upf(element, path, filename):
         "z_valence": z_valence,
         "wfc_cutoff": wfc_cutoff,
         "rho_cutoff": rho_cutoff,
+        "cutoff_source": "UPF header",
     }
 
 
@@ -106,7 +155,12 @@ def main():
     parser.add_argument(
         "--config", type=Path, default=ROOT / "config/qe.yaml", help="QE YAML config."
     )
+    parser.add_argument(
+        "--require", nargs="+", choices=("C", "Li", "Na"), default=["C"],
+        help="Elements whose files must be present; any present file is audited.",
+    )
     args = parser.parse_args()
+    required = set(args.require)
 
     try:
         with args.config.open(encoding="utf-8") as handle:
@@ -125,41 +179,38 @@ def main():
         filename = expected.get(element)
         if not filename:
             print(f"{element}: no expected filename configured")
-            if element in CURRENTLY_REQUIRED:
+            if element in required:
                 failed = True
             continue
 
         path = pseudo_dir / filename
         present = path.is_file() and path.stat().st_size > 0
         if present:
-            phase_note = "required now" if element in CURRENTLY_REQUIRED else "not required for current phase"
-            if element in CURRENTLY_REQUIRED:
-                try:
-                    metadata = audit_required_upf(element, path, filename)
-                except (OSError, ValueError) as exc:
-                    print(f"{element}: INVALID (required now) - {exc}")
-                    failed = True
-                    continue
-                print(f"{element}: VERIFIED ({phase_note}) - {filename}")
-                print(
-                    "  "
-                    f"MD5={metadata['md5']}; element={metadata['element']}; "
-                    f"type={metadata['pseudo_type']}; generated_dft={metadata['input_dft']}; "
-                    f"header_functional={metadata['functional']}; "
-                    f"z_valence={metadata['z_valence']:.1f}"
-                )
-                print(
-                    "  header recommendations: "
-                    f"ecutwfc={metadata['wfc_cutoff']:.6f} Ry; "
-                    f"ecutrho={metadata['rho_cutoff']:.6f} Ry"
-                )
-            else:
-                print(f"{element}: present ({phase_note}) - {filename}")
-        elif element in CURRENTLY_REQUIRED:
-            print(f"{element}: MISSING (required for current bare-substrate runs) - {filename}")
+            phase_note = "required" if element in required else "optional"
+            try:
+                metadata = audit_required_upf(element, path, filename)
+            except (OSError, ValueError) as exc:
+                print(f"{element}: INVALID ({phase_note}) - {exc}")
+                failed = True
+                continue
+            print(f"{element}: VERIFIED ({phase_note}) - {filename}")
+            print(
+                "  "
+                f"MD5={metadata['md5']}; element={metadata['element']}; "
+                f"type={metadata['pseudo_type']}; generated_dft={metadata['input_dft']}; "
+                f"functional={metadata['functional']}; "
+                f"z_valence={metadata['z_valence']:.1f}"
+            )
+            print(
+                f"  {metadata['cutoff_source']} recommendations: "
+                f"ecutwfc={metadata['wfc_cutoff']:.6f} Ry; "
+                f"ecutrho={metadata['rho_cutoff']:.6f} Ry"
+            )
+        elif element in required:
+            print(f"{element}: MISSING (required for this audit) - {filename}")
             failed = True
         else:
-            print(f"{element}: missing (not required for current phase) - {filename}")
+            print(f"{element}: missing (optional for this audit) - {filename}")
 
     return 1 if failed else 0
 

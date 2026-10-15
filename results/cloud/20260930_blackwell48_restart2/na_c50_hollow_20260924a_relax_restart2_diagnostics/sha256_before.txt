@@ -1,0 +1,2 @@
+e6ecea9e7460fe734d79544801e6b3f09e14519988c81b2ff83e8639fe99d429  /workspace/GrapheneAlkali-DFT/qe_inputs/adsorption/na_pristine_hollow/na_c50_hollow_20260924a_relax_restart2.in
+0a2699f846329a956f26cec4499bddfc020bb7415b29d5a8fafafcbcdc06fa2e  /workspace/q-e-7.6/bin/pw.x

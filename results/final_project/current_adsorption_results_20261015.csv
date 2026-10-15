@@ -1,0 +1,5 @@
+system,metal,substrate,status,total_energy_ry,adsorption_energy_ev,height_ang,total_magnetization_muB,max_force_component_ry_bohr,source
+Li/C50,Li,Pristine C50,Strictly converged,-936.96660595,-1.1819256092,1.691,0.00,0.00031647,results/adsorption/li_pristine_hollow/li_c50_hollow_20260919b_12h_relax.out
+Na/C50,Na,Pristine C50,Strictly converged,-1017.83308343,-0.5789818353,2.249,0.13,0.00036846,results/cloud/20260930_blackwell48_restart2/na_c50_hollow_20260924a_relax_restart2.out
+Li/C49,Li,C49 vacancy,Strictly converged,-918.05971984,-2.7196599579,1.795,0.96,0.00036398,results/cloud/20261008_li_c49_vacancy_18h_cont2/li_c49_vacancy_20261008a_segment03.out
+Na/C49,Na,C49 vacancy,Strictly converged,-998.91890564,-2.0175078236,2.2695104401,1.00,0.00039186,results/cloud/20261014_na_c49_resilient/na_c49_segment001.out

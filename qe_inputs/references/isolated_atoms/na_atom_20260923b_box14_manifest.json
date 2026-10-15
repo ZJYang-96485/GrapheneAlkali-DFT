@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923b_box14",
+  "created_utc": "2026-09-24T03:11:51.9197898Z",
+  "system": "neutral isolated Na atom in a 14 Angstrom cubic box",
+  "purpose": "second point of the approved cost-aware isolated-Na box-convergence sequence",
+  "input": "qe_inputs/references/isolated_atoms/na_atom_20260923b_box14.in",
+  "input_sha256": "e6008ff4b0aa700b2794ecb47e775c43cb44f46a8e7472975eac4cf26d92e837",
+  "runner": "scripts/run_isolated_na_box14.py",
+  "runner_sha256_at_creation": "447257b42cb045f1aae37f97d7d39fbf7190b94e213c33a22cfa982db418a56f",
+  "runner_base": "scripts/run_isolated_li_reference.py",
+  "runner_base_sha256_at_creation": "e58465bb01bfe19d5d15d65e115e8aff13060242d30a53a4302321c7de1ba577",
+  "method_plan": "docs/PHASE5_ISOLATED_ATOM_REFERENCE_PLAN.md",
+  "method_plan_sha256_at_creation": "6a1ee751906a4feb5c9ea2db083c99d7811a395674131b0f307fc246432b99b4",
+  "accepted_predecessor": {
+    "status": "results/phase5/diagnostics/na_atom_20260923a_box12/status.json",
+    "status_sha256": "9c8e9e117f24f298eabaa9d0126650be7bcc0aba38b7210e1fac7490ac76931b",
+    "output": "results/references/isolated_atoms/na_atom_20260923a_box12.out",
+    "output_sha256": "d058411b35bb93101a2c84e7f8f390eb508f916adc2560eacc6cad3b8c1e3714",
+    "energy_ry": -95.26918121,
+    "peak_gpu_fraction": 0.3322701343311047
+  },
+  "executable": "/home/joe_yang/q-e/bin/pw.x",
+  "executable_sha256": "922fe8820f328e7b63283b9f245dfe2b526fe1be0543a89bcca1f1ef04336fb6",
+  "pseudopotential": {
+    "file": "pseudopotentials/na_pbe_v1.5.uspp.F.UPF",
+    "md5": "44600605ef58000f06b90626533354dc",
+    "sha256": "f84820c4280d21603bd50ae76a08e15c26864391ea055cf50affc4aedefc8f87",
+    "z_valence": 9.0,
+    "source": "SSSP 1.0 PBE efficiency"
+  },
+  "scientific_settings": {
+    "charge_e": 0.0,
+    "nspin": 2,
+    "total_magnetization_bohr_magneton": 1.0,
+    "occupations": "fixed",
+    "input_dft": "PBE",
+    "dispersion": "DFT-D3(BJ)",
+    "assume_isolated": "mt",
+    "box_angstrom": [14.0, 14.0, 14.0],
+    "k_points": "Gamma",
+    "ecutwfc_ry": 65,
+    "ecutrho_ry": 520,
+    "conv_thr_ry": 1e-08,
+    "mixing_beta": 0.3,
+    "diagonalization": "cg"
+  },
+  "decision_rule": {
+    "compare_against_box_angstrom": 12.0,
+    "energy_tolerance_mev": 1.0,
+    "energy_tolerance_ry": 0.00007349864,
+    "accept_14_and_skip_16_if_within_tolerance": true,
+    "run_16_only_if_difference_exceeds_tolerance": true,
+    "automatic_followup": false
+  },
+  "resource_gates": {
+    "baseline_gpu_memory_fraction_max": 0.3,
+    "clean_stop_gpu_memory_fraction": 0.8,
+    "clean_stop_consecutive_checks": 3,
+    "wall_limit_seconds": 2100
+  },
+  "windows_watchdog_baseline": {
+    "captured_local": "2026-09-23T22:08:26.0168131-05:00",
+    "lookback_days": 7,
+    "unique_dump_names": 60,
+    "newest_dump_name": "WATCHDOG-20260923-0950.dmp",
+    "sorted_name_set_sha256": "8960cbd267e24f7c81d514b3d6878e05cd589cd6b11c5d55d787ec1073715bf5"
+  },
+  "references": [
+    "https://doi.org/10.1039/C8NR10383F",
+    "https://doi.org/10.3390/molecules24040754",
+    "https://www.quantum-espresso.org/Doc/INPUT_PW.html",
+    "https://archive.materialscloud.org/records/1dygy-1xb93"
+  ]
+}
