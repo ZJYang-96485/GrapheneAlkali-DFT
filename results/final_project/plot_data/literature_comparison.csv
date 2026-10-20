@@ -1,0 +1,10 @@
+comparison_id,quantity,system,metal,substrate,project_value,literature_value,literature_lower,literature_upper,unit,project_minus_literature,absolute_percent_difference,comparison_level,reference_key,interpretation
+pristine_li_energy,adsorption_energy,Li/C50,Li,pristine,-1.167671604795,-1.22,,,eV,0.052328395205,4.2892,close_quantitative_match,olsson2019,project is slightly less exothermic
+pristine_na_energy,adsorption_energy,Na/C50,Na,pristine,-0.572213139048,-0.62,,,eV,0.047786860952,7.7076,close_quantitative_match,olsson2019,project is slightly less exothermic
+pristine_li_height,adsorbate_height,Li/C50,Li,pristine,1.691,1.68,,,angstrom,0.011,0.6548,close_quantitative_match,olsson2019,project height is slightly larger
+pristine_na_height,adsorbate_height,Na/C50,Na,pristine,2.249,2.18,,,angstrom,0.069,3.1651,close_quantitative_match,olsson2019,project height is slightly larger
+vacancy_li_energy,adsorption_energy,Li/C49,Li,monovacancy,-2.717408623829,-3.23,,,eV,0.512591376171,15.8697,trend_match_method_and_size_sensitive,cottom2025,project is less exothermic but confirms strong vacancy anchoring
+vacancy_na_energy,adsorption_energy,Na/C49,Na,monovacancy,-2.015809016719,-2.52,,,eV,0.504190983281,20.0076,trend_match_method_and_size_sensitive,cottom2025,project is less exothermic but confirms strong vacancy anchoring
+vacancy_moment_range,total_magnetization,C49,,monovacancy,1.60,,1.12,1.53,muB_per_vacancy,0.07,,consistent_near_reported_range,yazyev2007,project is 0.07 muB above the concentration-dependent upper value
+vacancy_moment_planar,total_magnetization,C49,,monovacancy,1.60,1.50,,,muB_per_vacancy,0.10,6.6667,close_quantitative_match,padmanabhan2016,project supports a magnetic planar monovacancy state
+

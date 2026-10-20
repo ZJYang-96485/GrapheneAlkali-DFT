@@ -1,0 +1,9 @@
+[2026-10-16T06:04:06+00:00] monitoring pod 7qnzdeswypoz58 for strict completion or terminal failure
+scripts/watch_and_stop_runpod_final_20261016.sh: line 93: results/cloud/20261014_final_scf/state.txt: No such file or directory
+[2026-10-16T06:04:06+00:00] STOP GATE: validated_terminal_failure
+[2026-10-16T06:11:31+00:00] updating transient runpodctl for authenticated self-stop support
+downloading runpod v3.0.1 to runpodctl-linux-amd64
+moving runpodctl-linux-amd64 to /usr/bin/runpodctl
+[2026-10-16T06:11:32+00:00] monitoring pod 7qnzdeswypoz58 for strict completion or terminal failure
+results/cloud/20261014_final_campaign/final_scf_report_bundle_20261015.tar.gz: OK
+[2026-10-16T15:26:00+00:00] STOP GATE: validated_complete

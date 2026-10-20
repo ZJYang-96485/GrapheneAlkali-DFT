@@ -1,0 +1,145 @@
+{
+  "method": {
+    "code": "Quantum ESPRESSO pw.x 7.6",
+    "k_points": "9x9x1, unshifted",
+    "functional": "PBE + DFT-D3(BJ)",
+    "cutoffs_ry": "65/520",
+    "smearing": "Marzari-Vanderbilt, 0.01 Ry",
+    "adsorption_energy_equation": "E(M/Cn) - E(Cn) - E(M_atom)",
+    "ry_to_ev": 13.605693122994
+  },
+  "scf_results": [
+    {
+      "case": "na_c49",
+      "accepted_output": "results/cloud/20261014_final_scf/na_c49/na_c49_9x9x1_attempt04.out",
+      "final_total_energy_ry": -998.91885389,
+      "internal_energy_ry": -998.91987245,
+      "smearing_contribution_ry": 0.00101856,
+      "fermi_energy_ev": -3.6702,
+      "total_magnetization_mu_b": 1.01,
+      "absolute_magnetization_mu_b": 1.26,
+      "scf_iterations": 16,
+      "wall_time_seconds": 6600.0,
+      "gpu_acceleration_active": true,
+      "job_completed": true,
+      "all_electronic_cycles_converged": true
+    },
+    {
+      "case": "c49",
+      "accepted_output": "results/cloud/20261014_final_scf/c49/c49_9x9x1_attempt01.out",
+      "final_total_energy_ry": -903.50183184,
+      "internal_energy_ry": -903.5015215,
+      "smearing_contribution_ry": -0.00031034,
+      "fermi_energy_ev": -4.5526,
+      "total_magnetization_mu_b": 1.64,
+      "absolute_magnetization_mu_b": 2.14,
+      "scf_iterations": 20,
+      "wall_time_seconds": 7260.0,
+      "gpu_acceleration_active": true,
+      "job_completed": true,
+      "all_electronic_cycles_converged": true
+    },
+    {
+      "case": "li_c49",
+      "accepted_output": "results/cloud/20261014_final_scf/li_c49/li_c49_9x9x1_attempt01.out",
+      "final_total_energy_ry": -918.05962748,
+      "internal_energy_ry": -918.06049654,
+      "smearing_contribution_ry": 0.00086906,
+      "fermi_energy_ev": -3.9798,
+      "total_magnetization_mu_b": 0.95,
+      "absolute_magnetization_mu_b": 1.21,
+      "scf_iterations": 19,
+      "wall_time_seconds": 8580.0,
+      "gpu_acceleration_active": true,
+      "job_completed": true,
+      "all_electronic_cycles_converged": true
+    },
+    {
+      "case": "c50",
+      "accepted_output": "results/cloud/20261014_final_scf/c50/c50_9x9x1_attempt01.out",
+      "final_total_energy_ry": -922.52210437,
+      "internal_energy_ry": -922.5219739,
+      "smearing_contribution_ry": -0.00013047,
+      "fermi_energy_ev": -4.2026,
+      "total_magnetization_mu_b": null,
+      "absolute_magnetization_mu_b": null,
+      "scf_iterations": 11,
+      "wall_time_seconds": 661.79,
+      "gpu_acceleration_active": true,
+      "job_completed": true,
+      "all_electronic_cycles_converged": true
+    },
+    {
+      "case": "li_c50",
+      "accepted_output": "results/cloud/20261014_final_scf/li_c50/li_c50_9x9x1_attempt01.out",
+      "final_total_energy_ry": -936.96584225,
+      "internal_energy_ry": -936.96571243,
+      "smearing_contribution_ry": -0.00012982,
+      "fermi_energy_ev": -3.0446,
+      "total_magnetization_mu_b": -0.0,
+      "absolute_magnetization_mu_b": 0.0,
+      "scf_iterations": 12,
+      "wall_time_seconds": 3472.51,
+      "gpu_acceleration_active": true,
+      "job_completed": true,
+      "all_electronic_cycles_converged": true
+    },
+    {
+      "case": "na_c50",
+      "accepted_output": "results/cloud/20261014_final_scf/na_c50/na_c50_9x9x1_attempt01.out",
+      "final_total_energy_ry": -1017.83224564,
+      "internal_energy_ry": -1017.83060572,
+      "smearing_contribution_ry": -0.00163992,
+      "fermi_energy_ev": -2.9495,
+      "total_magnetization_mu_b": 0.15,
+      "absolute_magnetization_mu_b": 0.15,
+      "scf_iterations": 29,
+      "wall_time_seconds": 6300.0,
+      "gpu_acceleration_active": true,
+      "job_completed": true,
+      "all_electronic_cycles_converged": true
+    }
+  ],
+  "adsorption_results": [
+    {
+      "system": "li_c50",
+      "metal": "Li",
+      "substrate": "c50",
+      "combined_energy_ry": -936.96584225,
+      "substrate_energy_ry": -922.52210437,
+      "atom_reference_energy_ry": -14.35806979,
+      "adsorption_energy_ry": -0.08566809000007147,
+      "adsorption_energy_ev": -1.1655737429740034
+    },
+    {
+      "system": "na_c50",
+      "metal": "Na",
+      "substrate": "c50",
+      "combined_energy_ry": -1017.83224564,
+      "substrate_energy_ry": -922.52210437,
+      "atom_reference_energy_ry": -95.26886282,
+      "adsorption_energy_ry": -0.041278450000035605,
+      "adsorption_energy_ev": -0.561621923293336
+    },
+    {
+      "system": "li_c49",
+      "metal": "Li",
+      "substrate": "c49",
+      "combined_energy_ry": -918.05962748,
+      "substrate_energy_ry": -903.50183184,
+      "atom_reference_energy_ry": -14.35806979,
+      "adsorption_energy_ry": -0.19972584999999476,
+      "adsorption_energy_ev": -2.71740862382906
+    },
+    {
+      "system": "na_c49",
+      "metal": "Na",
+      "substrate": "c49",
+      "combined_energy_ry": -998.91885389,
+      "substrate_energy_ry": -903.50183184,
+      "atom_reference_energy_ry": -95.26886282,
+      "adsorption_energy_ry": -0.14815923000001874,
+      "adsorption_energy_ev": -2.015809016719341
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+degauss_ry,total_energy_ry,internal_energy_ry,energy_per_carbon_ev,delta_vs_0p01_mev_per_carbon,scf_iterations,wall_time_seconds,gpu_active,scf_converged,job_done
+0.005,-922.52148390,-922.52130158,-251.0308841862490,0.049614520577,11,800.82,True,True,True
+0.010,-922.52166623,-922.52130165,-251.0309338007696,0.000000000000,11,863.57,True,True,True
+0.020,-922.52186329,-922.52259492,-251.0309874235273,-0.053622757747,11,802.98,True,True,True
+

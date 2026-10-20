@@ -1,0 +1,8 @@
+system,metal,substrate,defect_state,ecutwfc_ry,ecutrho_ry,k_mesh,adsorbate_height_ang,total_magnetization_muB,max_force_component_ry_bohr,ionic_converged,job_done,source,provenance_availability
+C50,,C50,pristine,65,520,6x6x1,,,0.00000207,True,True,results/relaxation/pristine/relax_pristine_65_520_cg_20260916.out,raw_output_local
+C49,,C49,monovacancy,65,520,6x6x1,,1.60,0.000328405665,True,True,results/relaxation/monovacancy/relax_monovacancy_65_520_cg_seed001_c1_20260917.out,raw_output_local
+Li/C50,Li,C50,pristine,65,520,6x6x1,1.691,0.00,0.000316472047,True,True,results/adsorption/li_pristine_hollow/li_c50_hollow_20260919b_12h_relax.out,raw_output_local
+Na/C50,Na,C50,pristine,65,520,6x6x1,2.249,0.13,0.00036846,True,True,results/cloud/20260930_blackwell48_restart2/na_c50_hollow_20260924a_relax_restart2.out,raw_output_local
+Li/C49,Li,C49,monovacancy,65,520,6x6x1,1.795,0.96,0.00036398,True,True,results/cloud/20261008_li_c49_vacancy_18h_cont2/li_c49_vacancy_20261008a_segment03.out,strict_summary_value_raw_output_not_local
+Na/C49,Na,C49,monovacancy,65,520,6x6x1,2.2695104401,1.00,0.00039186,True,True,results/cloud/20261014_na_c49_resilient/na_c49_segment001.out,strict_summary_value_raw_output_not_local
+

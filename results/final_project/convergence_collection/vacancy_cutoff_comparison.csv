@@ -1,0 +1,2 @@
+system,comparison,energy_difference_ry,energy_difference_mev_per_carbon,largest_force_component_delta_ry_bohr,force_component_limit_ry_bohr,rms_force_component_delta_ry_bohr,largest_force_vector_delta_ry_bohr,total_magnetization_delta_muB,magnetization_limit_muB,scientific_completion_gate,force_field_gate,magnetization_gate,gpu_memory_gate
+Li/C49,55/440_minus_65/520_fixed_geometry,0.00985437000008,2.736235391,0.00014079,0.00040000,0.000025471711,0.000141314886,0.000000,0.050000,pass,pass,pass,fail

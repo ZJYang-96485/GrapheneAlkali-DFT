@@ -34,6 +34,44 @@ if [[ ! -e "${root}/relax_wfc_cleanup_complete" ]]; then
   printf '%s\n' "$(date --iso-8601=seconds)" >"${root}/relax_wfc_cleanup_complete"
 fi
 
+# The first cleanup covered the top-level distributed files, but QE also
+# retained portable per-k-point WFC files inside prefix.save.  The relaxation
+# is strictly accepted and its raw output/XML/charge density are preserved, so
+# these restart-only files can be removed before the final-SCF sequence.
+collected_cleanup_marker="${root}/relax_collected_wfc_cleanup_complete"
+if [[ ! -e "${collected_cleanup_marker}" ]]; then
+  {
+    date --iso-8601=seconds
+    find \
+      qe_scratch/adsorption/na_c49_vacancy_20261012a_relax \
+      qe_scratch/checkpoint_snapshots/na_c49_step43_20261013 \
+      -type f \( -name 'wfc*.dat' -o -name '*.wfc[0-9]*' \) \
+      -printf '%s %y %p\n' 2>/dev/null || true
+  } >>"${cleanup_log}"
+  find \
+    qe_scratch/adsorption/na_c49_vacancy_20261012a_relax \
+    qe_scratch/checkpoint_snapshots/na_c49_step43_20261013 \
+    -type f \( -name 'wfc*.dat' -o -name '*.wfc[0-9]*' \) \
+    -delete 2>/dev/null || true
+  sync
+  printf '%s\n' "$(date --iso-8601=seconds)" >"${collected_cleanup_marker}"
+fi
+
+# Attempt 02 converged electronically but the volume filled while QE wrote its
+# 22.9 GB distributed wavefunction.  Keep the portable restart files in
+# prefix.save, while removing only that incomplete attempt's redundant top-level
+# WFC before attempt 03 starts.
+recovery_wfc="qe_scratch/final_scf/final9_na_c49_20261014/final9_na_c49_20261014.wfc1"
+recovery_cleanup_marker="${root}/na_c49/attempt02_distributed_wfc_cleanup_complete"
+if [[ -f "${recovery_wfc}" && ! -e "${recovery_cleanup_marker}" ]]; then
+  mkdir -p "$(dirname "${recovery_cleanup_marker}")"
+  stat -c '%s %y %n' "${recovery_wfc}" \
+    >"${root}/na_c49/attempt02_distributed_wfc_cleanup.txt"
+  rm -f -- "${recovery_wfc}"
+  sync
+  printf '%s\n' "$(date --iso-8601=seconds)" >"${recovery_cleanup_marker}"
+fi
+
 # Order maximizes usable science if the campaign is interrupted: complete the
 # missing Na/C49 pair first, then the already accepted Li/C49 and pristine pairs.
 cases=(na_c49 c49 li_c49 c50 li_c50 na_c50)
@@ -93,8 +131,21 @@ for case_name in "${cases[@]}"; do
       --output "${restart_input}"
   fi
 
+  # Inputs generated before the storage diagnosis inherited QE's default
+  # disk_io='low'.  Normalize both fresh and restart variants without changing
+  # any physical or numerical parameter.
+  for generated_input in "${fresh_input}" "${restart_input}"; do
+    if grep -Eq '^[[:space:]]*disk_io[[:space:]]*=' "${generated_input}"; then
+      sed -Ei "s|^[[:space:]]*disk_io[[:space:]]*=.*$|   disk_io = 'nowf',|" \
+        "${generated_input}"
+    else
+      sed -i "/^[[:space:]]*outdir[[:space:]]*=/a\\   disk_io = 'nowf'," \
+        "${generated_input}"
+    fi
+  done
+
   printf 'running\n' >"${case_root}/state.txt"
-  for attempt in 1 2 3; do
+  for attempt in 1 2 3 4 5; do
     tag=$(printf 'attempt%02d' "${attempt}")
     output="${case_root}/${case_name}_9x9x1_${tag}.out"
     diagnostics="${case_root}/${tag}_diagnostics"
@@ -109,12 +160,10 @@ for case_name in "${cases[@]}"; do
       continue
     fi
     selected="${fresh_input}"
-    # Only request an SCF restart when QE actually wrote a restartable XML
-    # checkpoint.  A pre-SCF failure (for example, an unavailable outdir)
-    # leaves no checkpoint and must be relaunched from the fresh input.
-    if [[ ${attempt} -gt 1 && -s "${scratch_dir}/${prefix}.save/data-file-schema.xml" ]]; then
-      selected="${restart_input}"
-    fi
+    # disk_io='nowf' deliberately avoids the tens-of-GB wavefunction write and
+    # is not restartable.  Every new attempt therefore starts from the same
+    # fixed geometry rather than trusting a partial WFC left by an interrupted
+    # network-volume write.
     stamp "START ${case_name} ${tag} with $(basename "${selected}")"
     QE_PW="${pw}" scripts/run_runpod_qe_case.sh "${selected}" "${output}" "${diagnostics}"
     runner_exit=$?
@@ -130,15 +179,18 @@ for case_name in "${cases[@]}"; do
       stamp "ERROR ${case_name}: QE exit ${qe_exit}; no blind retry"
       exit 1
     fi
-    stamp "RESTARTABLE ${case_name}: clean incomplete ${tag}"
+    stamp "RETRYABLE_FROM_SCRATCH ${case_name}: clean incomplete ${tag}"
     sync
   done
   state=$(tr -d '[:space:]' <"${case_root}/state.txt")
   [[ "${state}" == "accepted" ]] || { stamp "ERROR ${case_name}: attempt limit exhausted"; exit 1; }
-  scf_wfc="qe_scratch/final_scf/${prefix}/${prefix}.wfc1"
-  if [[ -f "${scf_wfc}" ]]; then
-    stat -c '%s %y %n' "${scf_wfc}" >"${case_root}/removed_wfc_inventory.txt"
-    rm -f "${scf_wfc}"
+  scratch_root="qe_scratch/final_scf/${prefix}"
+  find "${scratch_root}" -maxdepth 2 -type f \
+    \( -name 'wfc*.dat' -o -name "${prefix}.wfc[0-9]*" \) \
+    -printf '%s %y %p\n' >"${case_root}/removed_wfc_inventory.txt" 2>/dev/null || true
+  if [[ -s "${case_root}/removed_wfc_inventory.txt" ]]; then
+    find "${scratch_root}" -maxdepth 2 -type f \
+      \( -name 'wfc*.dat' -o -name "${prefix}.wfc[0-9]*" \) -delete
     sync
   fi
 done

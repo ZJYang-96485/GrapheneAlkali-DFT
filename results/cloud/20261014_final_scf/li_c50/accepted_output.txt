@@ -1,0 +1,1 @@
+results/cloud/20261014_final_scf/li_c50/li_c50_9x9x1_attempt01.out

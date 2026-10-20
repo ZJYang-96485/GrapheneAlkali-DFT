@@ -1,0 +1,39 @@
+
+mkdir fail: [2] No such file or directory
+
+     Program PWSCF v.7.6 starts on 14Oct2026 at 10:44:57 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     723382 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine check_tempdir (1):
+     temporary directory ./qe_scratch/final_scf/final9_na_c49_20261014/ cannot be created or accessed
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    mpi-abort
+from the file:
+    /proj/libraries/nv/26.5/Linux_x86_64/cuda13.2/hpcx/hpcx-2.50/302492-rel-clean-1/ompi5/share/openmpi/help-mpi-api.txt: No such file or directory
+But I couldn't find that topic in the file.  Sorry!
+--------------------------------------------------------------------------

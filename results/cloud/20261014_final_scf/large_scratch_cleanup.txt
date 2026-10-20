@@ -1,0 +1,3 @@
+2026-10-14T10:44:33+00:00
+11190236160 2026-10-14 10:42:55.000000000 +0000 qe_scratch/adsorption/na_c49_vacancy_20261012a_relax/na_c49_vacancy_20261012a_relax.wfc1
+11190236160 2026-10-13 16:47:22.000000000 +0000 qe_scratch/checkpoint_snapshots/na_c49_step43_20261013/na_c49_vacancy_20261012a_relax.wfc1

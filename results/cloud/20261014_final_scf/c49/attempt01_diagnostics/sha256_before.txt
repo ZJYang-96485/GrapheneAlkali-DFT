@@ -1,0 +1,2 @@
+9b36e9b225a1de9dcc7d5e2dcf8666d21d1fc216b846563992b90c482d993da7  /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/c49_9x9x1.in
+0a2699f846329a956f26cec4499bddfc020bb7415b29d5a8fafafcbcdc06fa2e  /workspace/q-e-7.6/bin/pw.x

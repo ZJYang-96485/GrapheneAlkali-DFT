@@ -1,0 +1,381 @@
+{
+  "file": "/workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/na_c49_9x9x1_attempt04.out",
+  "calculation": "scf",
+  "job_completed": true,
+  "gpu_acceleration_active": true,
+  "electronic_convergence_reached": true,
+  "electronic_convergence_events": [
+    true
+  ],
+  "electronic_converged_cycles": 1,
+  "electronic_failed_cycles": 0,
+  "all_electronic_cycles_converged": true,
+  "scf_iterations": 16,
+  "wall_time_seconds": 6600.0,
+  "ionic_convergence_reached": null,
+  "ionic_relaxation_completed": null,
+  "ionic_steps": null,
+  "final_total_energy_ry": -998.91885389,
+  "smearing_contribution_ry": 0.00101856,
+  "internal_energy_ry": -998.91987245,
+  "fermi_energy_ev": -3.6702,
+  "final_total_force_ry_bohr": 0.002274,
+  "maximum_force_ry_bohr": 0.0006785730797784421,
+  "maximum_force_component_ry_bohr": 0.00055899,
+  "gradient_error_ry_bohr": null,
+  "final_forces": [
+    {
+      "atom": 1,
+      "type": 1,
+      "fx_ry_bohr": 2.467e-05,
+      "fy_ry_bohr": 0.00020357,
+      "fz_ry_bohr": -4.701e-05
+    },
+    {
+      "atom": 2,
+      "type": 1,
+      "fx_ry_bohr": -5.99e-05,
+      "fy_ry_bohr": -0.00028863,
+      "fz_ry_bohr": 0.0001131
+    },
+    {
+      "atom": 3,
+      "type": 1,
+      "fx_ry_bohr": 6.807e-05,
+      "fy_ry_bohr": 0.00030214,
+      "fz_ry_bohr": 8.042e-05
+    },
+    {
+      "atom": 4,
+      "type": 1,
+      "fx_ry_bohr": -0.00023697,
+      "fy_ry_bohr": -0.00016888,
+      "fz_ry_bohr": 0.00020022
+    },
+    {
+      "atom": 5,
+      "type": 1,
+      "fx_ry_bohr": 4.187e-05,
+      "fy_ry_bohr": 0.00030954,
+      "fz_ry_bohr": -0.00031729
+    },
+    {
+      "atom": 6,
+      "type": 1,
+      "fx_ry_bohr": -3.456e-05,
+      "fy_ry_bohr": -1.133e-05,
+      "fz_ry_bohr": -5.888e-05
+    },
+    {
+      "atom": 7,
+      "type": 1,
+      "fx_ry_bohr": 5.604e-05,
+      "fy_ry_bohr": 0.00045195,
+      "fz_ry_bohr": 0.00011239
+    },
+    {
+      "atom": 8,
+      "type": 1,
+      "fx_ry_bohr": -8.906e-05,
+      "fy_ry_bohr": 0.00019612,
+      "fz_ry_bohr": 2.034e-05
+    },
+    {
+      "atom": 9,
+      "type": 1,
+      "fx_ry_bohr": 0.00019387,
+      "fy_ry_bohr": 3.919e-05,
+      "fz_ry_bohr": 9.897e-05
+    },
+    {
+      "atom": 10,
+      "type": 1,
+      "fx_ry_bohr": 1.684e-05,
+      "fy_ry_bohr": -0.00013177,
+      "fz_ry_bohr": 0.00022162
+    },
+    {
+      "atom": 11,
+      "type": 1,
+      "fx_ry_bohr": 0.00014227,
+      "fy_ry_bohr": 0.00025839,
+      "fz_ry_bohr": 0.00017208
+    },
+    {
+      "atom": 12,
+      "type": 1,
+      "fx_ry_bohr": -3.843e-05,
+      "fy_ry_bohr": -0.00029387,
+      "fz_ry_bohr": -5.331e-05
+    },
+    {
+      "atom": 13,
+      "type": 1,
+      "fx_ry_bohr": 9.261e-05,
+      "fy_ry_bohr": 6.913e-05,
+      "fz_ry_bohr": -4.01e-06
+    },
+    {
+      "atom": 14,
+      "type": 1,
+      "fx_ry_bohr": 1.459e-05,
+      "fy_ry_bohr": -0.00055899,
+      "fz_ry_bohr": -0.00038442
+    },
+    {
+      "atom": 15,
+      "type": 1,
+      "fx_ry_bohr": -0.0001524,
+      "fy_ry_bohr": 0.00028796,
+      "fz_ry_bohr": 0.00026637
+    },
+    {
+      "atom": 16,
+      "type": 1,
+      "fx_ry_bohr": -0.00014369,
+      "fy_ry_bohr": -0.00018962,
+      "fz_ry_bohr": 0.00017054
+    },
+    {
+      "atom": 17,
+      "type": 1,
+      "fx_ry_bohr": 8.662e-05,
+      "fy_ry_bohr": 0.00047902,
+      "fz_ry_bohr": 0.00011069
+    },
+    {
+      "atom": 18,
+      "type": 1,
+      "fx_ry_bohr": -0.00010349,
+      "fy_ry_bohr": -0.00015376,
+      "fz_ry_bohr": -5.322e-05
+    },
+    {
+      "atom": 19,
+      "type": 1,
+      "fx_ry_bohr": 9.275e-05,
+      "fy_ry_bohr": 0.0002927,
+      "fz_ry_bohr": -0.00011139
+    },
+    {
+      "atom": 20,
+      "type": 1,
+      "fx_ry_bohr": -0.00019265,
+      "fy_ry_bohr": -3.976e-05,
+      "fz_ry_bohr": 0.00021514
+    },
+    {
+      "atom": 21,
+      "type": 1,
+      "fx_ry_bohr": -8.545e-05,
+      "fy_ry_bohr": 0.00013154,
+      "fz_ry_bohr": 0.0001735
+    },
+    {
+      "atom": 22,
+      "type": 1,
+      "fx_ry_bohr": 4.021e-05,
+      "fy_ry_bohr": -0.00013027,
+      "fz_ry_bohr": 0.00011132
+    },
+    {
+      "atom": 23,
+      "type": 1,
+      "fx_ry_bohr": -2.108e-05,
+      "fy_ry_bohr": 0.00022447,
+      "fz_ry_bohr": -0.00037927
+    },
+    {
+      "atom": 24,
+      "type": 1,
+      "fx_ry_bohr": 1.234e-05,
+      "fy_ry_bohr": -0.00051701,
+      "fz_ry_bohr": -0.00038343
+    },
+    {
+      "atom": 25,
+      "type": 2,
+      "fx_ry_bohr": 1.52e-06,
+      "fy_ry_bohr": 8.914e-05,
+      "fz_ry_bohr": 0.00018886
+    },
+    {
+      "atom": 26,
+      "type": 1,
+      "fx_ry_bohr": 9.521e-05,
+      "fy_ry_bohr": 7.343e-05,
+      "fz_ry_bohr": -0.00021518
+    },
+    {
+      "atom": 27,
+      "type": 1,
+      "fx_ry_bohr": 1.06e-06,
+      "fy_ry_bohr": -0.00017594,
+      "fz_ry_bohr": 6.234e-05
+    },
+    {
+      "atom": 28,
+      "type": 1,
+      "fx_ry_bohr": -0.0001251,
+      "fy_ry_bohr": -4.839e-05,
+      "fz_ry_bohr": 0.00010575
+    },
+    {
+      "atom": 29,
+      "type": 1,
+      "fx_ry_bohr": -5.321e-05,
+      "fy_ry_bohr": -0.00014816,
+      "fz_ry_bohr": -0.00010397
+    },
+    {
+      "atom": 30,
+      "type": 1,
+      "fx_ry_bohr": -5.834e-05,
+      "fy_ry_bohr": 1.461e-05,
+      "fz_ry_bohr": -4.027e-05
+    },
+    {
+      "atom": 31,
+      "type": 1,
+      "fx_ry_bohr": 7.244e-05,
+      "fy_ry_bohr": -0.00029406,
+      "fz_ry_bohr": -1.133e-05
+    },
+    {
+      "atom": 32,
+      "type": 1,
+      "fx_ry_bohr": -0.00012137,
+      "fy_ry_bohr": -3.277e-05,
+      "fz_ry_bohr": -4.33e-06
+    },
+    {
+      "atom": 33,
+      "type": 1,
+      "fx_ry_bohr": 0.00023936,
+      "fy_ry_bohr": -8.1e-05,
+      "fz_ry_bohr": 0.00019885
+    },
+    {
+      "atom": 34,
+      "type": 2,
+      "fx_ry_bohr": -2.901e-05,
+      "fy_ry_bohr": 7.891e-05,
+      "fz_ry_bohr": 0.00018911
+    },
+    {
+      "atom": 35,
+      "type": 1,
+      "fx_ry_bohr": 0.00015764,
+      "fy_ry_bohr": -0.00013348,
+      "fz_ry_bohr": 0.00017132
+    },
+    {
+      "atom": 36,
+      "type": 2,
+      "fx_ry_bohr": -0.00010198,
+      "fy_ry_bohr": 0.0002884,
+      "fz_ry_bohr": -0.00044487
+    },
+    {
+      "atom": 37,
+      "type": 1,
+      "fx_ry_bohr": 0.00019632,
+      "fy_ry_bohr": -0.0001246,
+      "fz_ry_bohr": 2.755e-05
+    },
+    {
+      "atom": 38,
+      "type": 1,
+      "fx_ry_bohr": -0.0002221,
+      "fy_ry_bohr": 0.0001711,
+      "fz_ry_bohr": -0.00014742
+    },
+    {
+      "atom": 39,
+      "type": 1,
+      "fx_ry_bohr": 0.00013181,
+      "fy_ry_bohr": -0.00036288,
+      "fz_ry_bohr": 4.072e-05
+    },
+    {
+      "atom": 40,
+      "type": 1,
+      "fx_ry_bohr": -5.546e-05,
+      "fy_ry_bohr": 0.00031322,
+      "fz_ry_bohr": 0.00010185
+    },
+    {
+      "atom": 41,
+      "type": 1,
+      "fx_ry_bohr": 1.198e-05,
+      "fy_ry_bohr": -0.00040044,
+      "fz_ry_bohr": -6.13e-06
+    },
+    {
+      "atom": 42,
+      "type": 1,
+      "fx_ry_bohr": -4.016e-05,
+      "fy_ry_bohr": 0.00022824,
+      "fz_ry_bohr": 8.009e-05
+    },
+    {
+      "atom": 43,
+      "type": 1,
+      "fx_ry_bohr": -1.812e-05,
+      "fy_ry_bohr": 8.195e-05,
+      "fz_ry_bohr": -4.285e-05
+    },
+    {
+      "atom": 44,
+      "type": 1,
+      "fx_ry_bohr": 0.00016498,
+      "fy_ry_bohr": 0.00024164,
+      "fz_ry_bohr": 0.0002646
+    },
+    {
+      "atom": 45,
+      "type": 1,
+      "fx_ry_bohr": -3.038e-05,
+      "fy_ry_bohr": 2.293e-05,
+      "fz_ry_bohr": -5.745e-05
+    },
+    {
+      "atom": 46,
+      "type": 1,
+      "fx_ry_bohr": -0.00014079,
+      "fy_ry_bohr": 3.982e-05,
+      "fz_ry_bohr": -0.00021204
+    },
+    {
+      "atom": 47,
+      "type": 1,
+      "fx_ry_bohr": 4.714e-05,
+      "fy_ry_bohr": -0.00012911,
+      "fz_ry_bohr": -4.869e-05
+    },
+    {
+      "atom": 48,
+      "type": 1,
+      "fx_ry_bohr": 1.535e-05,
+      "fy_ry_bohr": 0.00022789,
+      "fz_ry_bohr": -0.00014377
+    },
+    {
+      "atom": 49,
+      "type": 1,
+      "fx_ry_bohr": 0.0001292,
+      "fy_ry_bohr": -0.00026777,
+      "fz_ry_bohr": -0.00010194
+    },
+    {
+      "atom": 50,
+      "type": 3,
+      "fx_ry_bohr": 6.92e-06,
+      "fy_ry_bohr": -0.0004345,
+      "fz_ry_bohr": -0.00012523
+    }
+  ],
+  "final_coordinates": null,
+  "total_magnetization_bohr_magneton_per_cell": 1.01,
+  "absolute_magnetization_bohr_magneton_per_cell": 1.26
+}

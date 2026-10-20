@@ -1,0 +1,23 @@
+	Command being timed: "/workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c50_9x9x1.in"
+	User time (seconds): 6245.53
+	System time (seconds): 96.94
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:45:55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19603292
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 225010046
+	Voluntary context switches: 154704
+	Involuntary context switches: 18166
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

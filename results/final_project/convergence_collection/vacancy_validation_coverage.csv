@@ -1,0 +1,4 @@
+system,cutoff_evidence,kpoint_evidence,smearing_evidence
+C49,not_calculated,two_point_6x6x1_to_9x9x1_final_energy,not_calculated
+Li/C49,two_point_55_440_to_65_520_fixed_geometry,two_point_6x6x1_to_9x9x1_final_energy,not_calculated
+Na/C49,not_calculated,two_point_6x6x1_to_9x9x1_final_energy,not_calculated

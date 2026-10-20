@@ -1,0 +1,7 @@
+case,accepted_output,final_total_energy_ry,internal_energy_ry,smearing_contribution_ry,fermi_energy_ev,total_magnetization_mu_b,absolute_magnetization_mu_b,scf_iterations,wall_time_seconds,gpu_acceleration_active,job_completed,all_electronic_cycles_converged
+na_c49,results/cloud/20261014_final_scf/na_c49/na_c49_9x9x1_attempt04.out,-998.91885389,-998.91987245,0.00101856,-3.6702,1.01,1.26,16,6600.0,True,True,True
+c49,results/cloud/20261014_final_scf/c49/c49_9x9x1_attempt01.out,-903.50183184,-903.5015215,-0.00031034,-4.5526,1.64,2.14,20,7260.0,True,True,True
+li_c49,results/cloud/20261014_final_scf/li_c49/li_c49_9x9x1_attempt01.out,-918.05962748,-918.06049654,0.00086906,-3.9798,0.95,1.21,19,8580.0,True,True,True
+c50,results/cloud/20261014_final_scf/c50/c50_9x9x1_attempt01.out,-922.52210437,-922.5219739,-0.00013047,-4.2026,,,11,661.79,True,True,True
+li_c50,results/cloud/20261014_final_scf/li_c50/li_c50_9x9x1_attempt01.out,-936.96584225,-936.96571243,-0.00012982,-3.0446,-0.0,0.0,12,3472.51,True,True,True
+na_c50,results/cloud/20261014_final_scf/na_c50/na_c50_9x9x1_attempt01.out,-1017.83224564,-1017.83060572,-0.00163992,-2.9495,0.15,0.15,29,6300.0,True,True,True

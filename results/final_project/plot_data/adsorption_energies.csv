@@ -1,0 +1,8 @@
+record_id,system,metal,substrate,defect_state,site,ecutwfc_ry,ecutrho_ry,k_mesh,degauss_ry,combined_energy_ry,substrate_energy_ry,atom_reference_energy_ry,adsorption_energy_ev,gpu_active,electronic_converged,job_done,comparison_role,provenance_availability
+li_c50_65,Li/C50,Li,C50,pristine,hollow,65,520,9x9x1,0.01,-936.96584225,-922.52210437,-14.35806979,-1.165573742974,True,True,True,common_four_system_dataset,strict_campaign_summary_bundle_not_local
+na_c50_65,Na/C50,Na,C50,pristine,hollow,65,520,9x9x1,0.01,-1017.83224564,-922.52210437,-95.26886282,-0.561621923293,True,True,True,common_four_system_dataset,strict_campaign_summary_bundle_not_local
+li_c49_65,Li/C49,Li,C49,monovacancy,vacancy_centered,65,520,9x9x1,0.01,-918.05962748,-903.50183184,-14.35806979,-2.717408623829,True,True,True,common_four_system_dataset,strict_campaign_summary_bundle_not_local
+na_c49_65,Na/C49,Na,C49,monovacancy,vacancy_centered,65,520,9x9x1,0.01,-998.91885389,-903.50183184,-95.26886282,-2.015809016719,True,True,True,common_four_system_dataset,strict_campaign_summary_bundle_not_local
+li_c50_70,Li/C50,Li,C50,pristine,hollow,70,560,9x9x1,0.01,-936.96944801,-922.52569364,-14.35793209,-1.167671604795187,True,True,True,pristine_cutoff_validation,strict_campaign_summary_bundle_not_local
+na_c50_70,Na/C50,Na,C50,pristine,hollow,70,560,9x9x1,0.01,-1017.83593394,-922.52569364,-95.26818341,-0.572213139047872,True,True,True,pristine_cutoff_validation,strict_campaign_summary_bundle_not_local
+

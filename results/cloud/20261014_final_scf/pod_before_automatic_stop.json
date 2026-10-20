@@ -1,0 +1,42 @@
+{
+  "containerDiskInGb": 20,
+  "costPerHr": 1.29,
+  "createdAt": "2026-10-07 07:43:50.628 +0000 UTC",
+  "desiredStatus": "RUNNING",
+  "dockerStartCmd": [
+    "/bin/bash",
+    "-lc",
+    "/bin/bash /workspace/GrapheneAlkali-DFT/scripts/runpod_bootstrap_final_campaign_20261014.sh"
+  ],
+  "env": {
+    "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA6cvJVQdI4BdORuyPKBHZusTkMj0J+ouie85EQPSuKr runpod-qe-20260924"
+  },
+  "gpuCount": 1,
+  "gpuId": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+  "id": "7qnzdeswypoz58",
+  "imageName": "nvcr.io/nvidia/nvhpc:26.5-devel-cuda_multi-ubuntu22.04",
+  "memoryInGb": 167,
+  "name": "graphene-qe76-pro6000mig48-li-c49-18h-20261007",
+  "networkVolumeId": "ikljhz724r",
+  "ports": [
+    "22/tcp"
+  ],
+  "runtimeStatus": "running",
+  "ssh": {
+    "id": "7qnzdeswypoz58",
+    "ip": "216.243.220.112",
+    "name": "graphene-qe76-pro6000mig48-li-c49-18h-20261007",
+    "port": 15139,
+    "setup": "runpodctl doctor",
+    "ssh_command": "ssh root@216.243.220.112 -p 15139",
+    "ssh_key": {
+      "exists": false,
+      "path": "/root/.runpod/ssh/runpodctl-ssh-key",
+      "source": "runpodctl doctor"
+    }
+  },
+  "uptimeSeconds": 33569,
+  "vcpuCount": 10,
+  "volumeInGb": 0,
+  "volumeMountPath": "/workspace"
+}

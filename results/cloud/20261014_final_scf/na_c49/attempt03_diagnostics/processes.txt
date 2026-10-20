@@ -1,0 +1,412 @@
+2026-10-16T05:56:45+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       0 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 S     0.0  0.0  3664 1562140      0 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:46+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       1 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl    188  0.0 257084 10799320    1 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:47+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       2 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   94.0  0.0 257084 10799320    2 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:48+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       3 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   62.6  0.0 257084 10799320    3 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:49+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       4 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   47.0  0.0 257084 10799320    4 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:50+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       5 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   37.6  0.0 257084 10799320    5 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:51+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       6 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   31.3  0.0 257092 10799480    6 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:52+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       7 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   26.8  0.0 257092 10799480    7 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:53+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       8 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   23.5  0.0 257092 10799480    8 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:54+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792       9 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   20.8  0.0 257092 10799480    9 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:55+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      10 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   18.8  0.0 257092 10799480   10 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:56+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      11 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   17.0  0.0 257092 10799480   11 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:57+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      12 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   15.6  0.0 257092 10799480   12 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:58+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      13 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   14.4  0.0 257092 10799480   13 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:56:59+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      14 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   15.0  0.0 291496 23816776   14 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:00+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      15 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   14.2  0.0 291532 23817248   15 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:01+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      17 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.5  0.0 332508 23817248   17 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:02+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      18 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.8  0.0 332508 23817248   18 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:03+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      19 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.2  0.0 332508 23817248   19 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:04+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      20 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.0  0.0 332508 23817248   20 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:05+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      21 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   10.5  0.0 332508 23817248   21 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:06+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      22 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   10.0  0.0 332508 23817248   22 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:07+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      23 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   11.0  0.0 499824 24396644   23 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:08+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      24 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.8  0.0 512016 24536132   24 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:09+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      25 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.4  0.0 513624 25126504   25 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:10+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      26 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.0  0.0 513624 25126504   26 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:12+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      27 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.9  0.0 513636 25126636   27 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:13+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      28 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.5  0.0 513636 25126636   28 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:14+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      29 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   11.1  0.0 513692 25126636   29 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:15+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      30 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   10.7  0.0 513692 25126636   30 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:16+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      31 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   10.4  0.0 513692 25126636   31 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:17+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      32 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   11.0  0.0 627788 26711660   32 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:18+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      33 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.2  0.0 780452 26772588   33 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:19+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      34 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   12.3  0.0 841700 27092908   34 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:20+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      35 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   14.6  0.0 1114908 27366128  35 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:21+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      36 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   14.2  0.0 1114908 27366128  36 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:22+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      37 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   13.8  0.0 1114908 27366128  37 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:23+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      38 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   13.5  0.0 1114908 27366128  38 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:24+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      39 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   13.1  0.0 1114908 27366128  39 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:25+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      40 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.8  0.0 1114908 27366128  40 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:26+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      42 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   12.4  0.0 1507436 28578544  42 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:27+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      43 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.4  0.0 2007228 28578544  43 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:28+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      44 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.1  0.0 2007228 28578544  44 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:29+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      45 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   13.6  0.1 2362052 30103960  45 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:30+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      46 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   13.4  0.1 2362052 30103960  46 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:31+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      47 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   13.1  0.1 2362052 30103960  47 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:32+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      48 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.8  0.1 2362052 30103960  48 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:33+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      49 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.6  0.1 2362052 30103960  49 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:34+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      50 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   12.3  0.1 2362052 30103960  50 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:35+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      51 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   13.2  0.1 2520268 30103960  51 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:36+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      52 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   14.9  0.1 2520268 30103960  52 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:38+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      53 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   16.6  0.1 2520268 30103960  53 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:39+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      54 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   17.8  0.1 2619884 30411420  54 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:40+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      55 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   17.6  0.1 2619884 30411420  55 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:41+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      56 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   17.3  0.1 2619884 30411420  56 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:42+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      57 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   17.0  0.1 2619884 30411420  57 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:43+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      58 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   16.7  0.1 2619884 30411420  58 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:44+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      59 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   16.4  0.1 2619884 30411420  59 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:45+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      60 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   16.1  0.1 2619884 30411420  60 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:46+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      61 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   16.3  0.1 2746512 31121148  61 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:47+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      62 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   16.2  0.1 2746512 31121148  62 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:48+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      63 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   16.0  0.1 2746512 31121148  63 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:49+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      64 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   15.7  0.1 2746512 31121148  64 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:50+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      65 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   15.6  0.1 2746512 31121148  65 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:51+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      66 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   15.4  0.1 2746512 31121148  66 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:52+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      67 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   15.3  0.1 2746568 31057840  67 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:53+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      68 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   15.5  0.1 2875540 32320104  68 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:54+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      69 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   15.7  0.1 2876424 32331796  69 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:55+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      71 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   15.9  0.1 2938044 32333552  71 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:56+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      72 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   17.1  0.1 3265344 32627216  72 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:57+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      73 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   18.3  0.1 3219792 32541152  73 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:58+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      74 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   18.4  0.1 3012224 33100520  74 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:57:59+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      75 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   18.1  0.1 3012224 33100520  75 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:00+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      76 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   17.9  0.1 3012224 33100520  76 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:01+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      77 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   17.7  0.1 3012224 33100520  77 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:02+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      78 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   18.2  0.1 3186632 41889940  78 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:03+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      79 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   18.6  0.1 3733072 42436392  79 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:05+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      80 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   18.8  0.1 4006300 42709624  80 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:06+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      81 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   19.1  0.2 4552724 43256036  81 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:07+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      82 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   19.3  0.2 4873708 43802468  82 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:08+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      83 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   19.6  0.2 5372344 44075692  83 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:09+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      84 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   19.8  0.2 5918760 44622152  84 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:10+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      85 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   20.0  0.2 6191964 44895356  85 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:11+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      86 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   20.2  0.3 6738380 45441776  86 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:12+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      87 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   20.5  0.3 7284788 45988212  87 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:13+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      88 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   20.6  0.3 7557996 46261440  88 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:14+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      89 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   20.7  0.3 7831204 46534672  89 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:15+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      90 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   20.9  0.3 8377616 47081084  90 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:16+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      91 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   21.2  0.4 8924032 47627512  91 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:17+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      92 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   21.3  0.4 9197240 47900732  92 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:18+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      93 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   21.5  0.4 9743656 48447188  93 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:19+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      94 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   21.7  0.4 10129196 48993592 94 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:20+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      95 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   21.8  0.4 10563268 49266804 95 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:21+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      97 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   21.8  0.5 11109684 49813240 97 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:22+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      98 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   21.9  0.5 11382892 50086464 98 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:23+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792      99 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   22.1  0.5 11929304 50632924 99 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:24+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     100 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   22.2  0.5 12202508 50906128 100 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:25+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     101 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Rl   22.4  0.6 12748920 51452552 101 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:26+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     102 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   22.5  0.6 13022128 51725772 102 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:27+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     103 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 Dl   22.7  0.6 13568544 52272224 103 /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+2026-10-16T05:58:28+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     104 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 D    22.5  0.0     0      0     104 [pw.x]
+2026-10-16T05:58:29+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     105 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 R    23.0  0.0     0      0     105 [pw.x]
+2026-10-16T05:58:30+00:00
+    PID    PPID STAT %CPU %MEM   RSS    VSZ ELAPSED CMD
+  88910   88889 S     0.0  0.0  1532   2792     106 /usr/bin/time -v -o /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/attempt03_diagnostics/time.txt /workspace/q-e-7.6/bin/pw.x -in /workspace/GrapheneAlkali-DFT/qe_inputs/final_scf/20261014/na_c49_9x9x1_restart.in
+  88913   88910 R    23.0  0.0     0      0     106 [pw.x]

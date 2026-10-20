@@ -1,0 +1,12 @@
+272424716 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc12.dat
+272227652 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc11.dat
+272042180 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc10.dat
+272111732 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc9.dat
+272142644 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc8.dat
+272113664 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc7.dat
+272161964 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc6.dat
+272038316 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc5.dat
+272053772 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc4.dat
+272104004 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc3.dat
+272024792 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc2.dat
+272105936 f qe_scratch/final_scf/final9_c50_20261014/final9_c50_20261014.save/wfc1.dat

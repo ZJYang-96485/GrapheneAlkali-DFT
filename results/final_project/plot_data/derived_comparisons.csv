@@ -1,0 +1,8 @@
+comparison_id,comparison_type,metal,substrate_a,substrate_b,value_ev,display_meaning,input_dataset
+li_vacancy_strengthening,defect_strengthening,Li,C50,C49,1.551834880855,vacancy adsorption is stronger by this magnitude,65/520 Ry 9x9x1 common four-system data
+na_vacancy_strengthening,defect_strengthening,Na,C50,C49,1.454187093426,vacancy adsorption is stronger by this magnitude,65/520 Ry 9x9x1 common four-system data
+li_minus_na_pristine,metal_selectivity,Li_minus_Na,C50,C50,0.603951819681,Li adsorption is stronger than Na by this magnitude,65/520 Ry 9x9x1 common four-system data
+li_minus_na_vacancy,metal_selectivity,Li_minus_Na,C49,C49,0.701599607110,Li adsorption is stronger than Na by this magnitude,65/520 Ry 9x9x1 common four-system data
+li_cutoff_shift_70_minus_65,cutoff_shift,Li,C50,C50,-0.002097861821,negative means 70/560 gives more exothermic adsorption,65/520 versus 70/560 Ry fixed geometry
+na_cutoff_shift_70_minus_65,cutoff_shift,Na,C50,C50,-0.010591215755,negative means 70/560 gives more exothermic adsorption,65/520 versus 70/560 Ry fixed geometry
+

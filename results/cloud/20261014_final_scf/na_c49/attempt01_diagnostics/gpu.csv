@@ -1,0 +1,4 @@
+timestamp, name, uuid, memory.used [MiB], memory.total [MiB], utilization.gpu [%], power.draw [W], temperature.gpu
+2026/10/14 10:44:43.869, NVIDIA RTX PRO 6000 Blackwell Server Edition, GPU-04a80c7b-b426-b8ea-c98d-3e67c7769e84, [Insufficient Permissions], [Insufficient Permissions], [N/A], 218.77 W, 44
+2026/10/14 10:44:52.267, NVIDIA RTX PRO 6000 Blackwell Server Edition, GPU-04a80c7b-b426-b8ea-c98d-3e67c7769e84, [Insufficient Permissions], [Insufficient Permissions], [N/A], 212.45 W, 44
+2026/10/14 10:44:56.571, NVIDIA RTX PRO 6000 Blackwell Server Edition, GPU-04a80c7b-b426-b8ea-c98d-3e67c7769e84, [Insufficient Permissions], [Insufficient Permissions], [N/A], 281.20 W, 49

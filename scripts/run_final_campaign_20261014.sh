@@ -8,7 +8,14 @@ mkdir -p "${root}"
 exec 7>"${root}/campaign.lock"
 flock -n 7 || exit 75
 exec >>"${root}/campaign.log" 2>&1
+printf 'running\n' >"${root}/state.txt"
 printf '[%s] campaign invocation start\n' "$(date --iso-8601=seconds)"
+
+if ! pgrep -fa '[p]ostprocess_final_scf_campaign_20261015' >/dev/null; then
+  nohup bash scripts/postprocess_final_scf_campaign_20261015.sh </dev/null \
+    >/dev/null 2>&1 &
+  printf '%s\n' "$!" >"${root}/postprocess_watcher_pid.txt"
+fi
 
 if pgrep -x pw.x >/dev/null 2>&1; then
   printf '[%s] ERROR: unexpected pw.x before campaign start\n' "$(date --iso-8601=seconds)"

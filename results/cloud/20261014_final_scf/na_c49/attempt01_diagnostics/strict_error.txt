@@ -1,0 +1,1 @@
+error: Incomplete QE output /workspace/GrapheneAlkali-DFT/results/cloud/20261014_final_scf/na_c49/na_c49_9x9x1_attempt01.out; missing or unfinished: final_total_energy_ry, electronic_convergence_reached, scf_iterations, wall_time_seconds, job_completed, gpu_acceleration_active

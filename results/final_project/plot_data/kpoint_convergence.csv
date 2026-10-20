@@ -1,0 +1,6 @@
+k_grid_n,k_mesh,total_energy_ry,energy_per_carbon_ev,delta_vs_12x12x1_mev_per_carbon,scf_iterations,wall_time_seconds,gpu_active,scf_converged,job_done
+3,3x3x1,-922.51651316,-251.0295315789883,1.539720915929,11,359.21,True,True,True
+6,6x6x1,-922.52166623,-251.0309338007696,0.137499134695,11,863.57,True,True,True
+9,9x9x1,-922.52210437,-251.0310530247372,0.018275167037,11,1358.60,True,True,True
+12,12x12x1,-922.52217153,-251.0310712999043,0.000000000000,11,2199.86,True,True,True
+

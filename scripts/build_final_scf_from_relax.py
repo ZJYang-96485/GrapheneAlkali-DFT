@@ -13,7 +13,10 @@ import argparse
 import re
 from pathlib import Path
 
-from parse_qe_output import parse_output
+try:
+    from .parse_qe_output import parse_output
+except ImportError:  # Direct execution as ``python3 scripts/...``.
+    from parse_qe_output import parse_output
 
 
 def replace_control(text: str, prefix: str, outdir: str, restart_mode: str) -> str:
@@ -26,19 +29,31 @@ def replace_control(text: str, prefix: str, outdir: str, restart_mode: str) -> s
         "restart_mode": f"'{restart_mode}'",
         "prefix": f"'{prefix}'",
         "outdir": f"'{outdir}'",
+        # Final energies and charge densities are required; wavefunctions are
+        # not.  Avoid tens of GB of redundant portable/distributed WFC files
+        # on the 50 GB RunPod network volume.
+        "disk_io": "'nowf'",
     }
     for key, value in replacements.items():
         pattern = rf"(?mi)^(\s*{re.escape(key)}\s*=\s*).+?,\s*$"
         block, count = re.subn(pattern, rf"\g<1>{value},", block)
         if count == 0:
-            block = block[:-1] + f"   {key} = {value},\n/"
+            block, count = re.subn(
+                r"(?m)^/\s*$", f"   {key} = {value},\n/", block, count=1
+            )
+            if count != 1:
+                raise ValueError("malformed &CONTROL terminator")
 
     block = re.sub(
         r"(?mi)^\s*(?:etot_conv_thr|forc_conv_thr|nstep|max_seconds)\s*=.*\n?",
         "",
         block,
     )
-    block = block[:-1] + "   max_seconds = 14400,\n/"
+    block, count = re.subn(
+        r"(?m)^/\s*$", "   max_seconds = 14400,\n/", block, count=1
+    )
+    if count != 1:
+        raise ValueError("malformed &CONTROL terminator")
     return text[: match.start()] + block + text[match.end() :]
 
 
